@@ -14,7 +14,7 @@
 
   <style>
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
+    html { scroll-behavior:smooth; overflow-x:hidden; }
     body { font-family:'Inter',sans-serif; font-weight:400; color:#1C1C1C; background:#F3F0EA; overflow-x:hidden; }
 
     :root {
@@ -72,6 +72,7 @@
     .nav-links a:hover { color:rgba(255,255,255,.9); }
     .nav-cta { background:var(--canal)!important; color:#fff!important; padding:8px 20px; border-radius:4px; text-transform:none!important; letter-spacing:-.01em!important; font-size:.82rem!important; font-family:'Syne',sans-serif; font-weight:700!important; transition:background .2s!important; }
     .nav-cta:hover { background:var(--canal-dark)!important; }
+    .nav-mobile-cta { display:none; background:var(--canal); color:#fff; text-decoration:none; padding:8px 16px; border-radius:4px; font-family:'Syne',sans-serif; font-size:.78rem; font-weight:700; white-space:nowrap; }
 
     /* ── WHATSAPP ── */
     .wa-float { position:fixed; bottom:28px; right:28px; z-index:999; background:#25D366; color:#fff; width:54px; height:54px; border-radius:27px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,.35); transition:transform .25s, width .3s, padding .3s; overflow:hidden; white-space:nowrap; }
@@ -246,18 +247,74 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width:960px) {
-      nav { padding:0 24px; } .nav-links { display:none; }
-      .hero-inner { grid-template-columns:1fr; padding:0 32px; }
+      /* NAV */
+      nav { padding:0 20px; height:56px; }
+      .nav-links { display:none; }
+      .nav-mobile-cta { display:flex !important; }
+
+      /* HERO */
+      .hero { min-height:auto; height:auto; padding:100px 0 72px; }
+      .hero-inner { grid-template-columns:1fr; padding:0 20px; gap:0; }
       .hero-visual { display:none; }
-      .stats-row { padding:0 32px; grid-template-columns:1fr 1fr; }
-      .stat-block:nth-child(3) { border-left:none; }
-      .sec-wrap, .zone-inner, .cta-wrap { padding:0 32px; }
-      .module-grid, .testi-grid { grid-template-columns:1fr; }
-      .zone-inner, .cta-wrap { grid-template-columns:1fr; gap:40px; }
-      .trust { padding:20px 32px; }
-      footer { padding:32px 24px; }
-      .footer-inner { flex-direction:column; align-items:flex-start; }
+      .hero h1 { font-size:clamp(1.9rem,7.5vw,3rem); }
+      .hero-tag { max-width:100%; font-size:.9rem; margin-bottom:32px; }
+      .hero-ctas { flex-direction:column; gap:10px; }
+      .btn-canal, .btn-ghost { text-align:center; padding:14px 20px; }
       .hero-scroll { display:none; }
+
+      /* STATS */
+      .stats-sec { padding:48px 0; }
+      .stats-row { padding:0 20px; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); }
+      .stat-block { padding:28px 18px; background:var(--concrete); border-left:none !important; }
+      .stat-num { font-size:clamp(2.6rem,10vw,4rem); }
+
+      /* TRUST */
+      .trust { padding:18px 20px; }
+      .trust-inner { gap:10px 20px; }
+      .trust-item { font-size:.65rem; }
+
+      /* BENEFITS */
+      .benefits { padding:64px 0; }
+      .sec-wrap { padding:0 20px; }
+      .module-grid { grid-template-columns:1fr; }
+      .sec-title { font-size:clamp(1.6rem,6vw,2.4rem); margin-bottom:32px; }
+
+      /* TESTIMONIALS */
+      .testi-sec { padding:64px 0; }
+      .testi-grid { grid-template-columns:1fr; }
+      .case-study { padding:36px 24px; }
+
+      /* ZONE */
+      .zone-sec { padding:64px 0; }
+      .zone-inner { grid-template-columns:1fr; gap:40px; padding:0 20px; }
+
+      /* CTA FINAL */
+      .cta-final { padding:64px 20px; }
+      .cta-wrap { grid-template-columns:1fr; gap:36px; padding:0; max-width:100%; }
+      .cta-text h2 { font-size:clamp(1.8rem,7vw,2.8rem); }
+      .btn-canal-lg, .btn-outline-dark { padding:16px 24px; }
+
+      /* FOOTER */
+      footer { padding:40px 20px; }
+      .footer-inner { flex-direction:column; align-items:flex-start; gap:16px; }
+      .footer-links { flex-wrap:wrap; gap:12px 20px; }
+    }
+
+    @media (max-width:480px) {
+      nav { padding:0 16px; }
+      .hero { padding:90px 0 60px; }
+      .hero-inner { padding:0 16px; }
+      .hero h1 { font-size:clamp(1.75rem,8vw,2.4rem); }
+      .hero-badge { font-size:.6rem; }
+      .stats-row { padding:0 16px; }
+      .stat-block { padding:22px 14px; }
+      .stat-num { font-size:clamp(2.2rem,10vw,3.2rem); }
+      .sec-wrap { padding:0 16px; }
+      .zone-inner { padding:0 16px; }
+      .cta-final { padding:52px 16px; }
+      footer { padding:36px 16px; }
+      .trust { padding:16px; }
+      .trust-inner { flex-direction:column; gap:10px; align-items:flex-start; }
     }
   </style>
 </head>
@@ -272,6 +329,7 @@
     <li><a href="/blog">Blog</a></li>
     <li><a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" class="nav-cta" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
   </ul>
+  <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" class="nav-mobile-cta" target="_blank" rel="noopener">Estimer →</a>
 </nav>
 
 <!-- HERO -->

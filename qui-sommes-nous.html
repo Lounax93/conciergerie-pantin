@@ -14,7 +14,7 @@
 
   <style>
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
+    html { scroll-behavior:smooth; overflow-x:hidden; }
     body { font-family:'Inter',sans-serif; font-weight:400; color:#1C1C1C; background:#F3F0EA; overflow-x:hidden; }
 
     :root {
@@ -58,6 +58,7 @@
     .nav-links a:hover, .nav-links a.active { color:rgba(255,255,255,.9); }
     .nav-cta { background:var(--canal)!important; color:#fff!important; padding:8px 20px; border-radius:4px; text-transform:none!important; letter-spacing:-.01em!important; font-size:.82rem!important; font-family:'Syne',sans-serif; font-weight:700!important; transition:background .2s!important; }
     .nav-cta:hover { background:var(--canal-dark)!important; }
+    .nav-mobile-cta { display:none; background:var(--canal); color:#fff; text-decoration:none; padding:8px 16px; border-radius:4px; font-family:'Syne',sans-serif; font-size:.78rem; font-weight:700; white-space:nowrap; }
 
     /* ── WHATSAPP ── */
     .wa-float { position:fixed; bottom:28px; right:28px; z-index:999; background:#25D366; color:#fff; width:54px; height:54px; border-radius:27px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,.35); transition:transform .25s, width .3s, padding .3s; overflow:hidden; white-space:nowrap; }
@@ -175,17 +176,56 @@
     .footer-copy { font-size:.68rem; color:rgba(255,255,255,.16); }
 
     @media (max-width:960px) {
-      nav { padding:0 24px; } .nav-links { display:none; }
-      .page-hero { padding:120px 24px 80px; clip-path:none; margin-bottom:0; }
-      .hist-grid, .cta-wrap { grid-template-columns:1fr; gap:40px; }
-      .stats-inner { grid-template-columns:1fr 1fr; gap:0; padding:0 24px; }
-      .sb-block { padding:24px 20px; border-left:none; border-top:1px solid rgba(255,255,255,.07); }
-      .val-grid, .team-grid { grid-template-columns:1fr; }
-      .sec-wrap { padding:0 24px; }
-      .valeurs, .equipe { padding:64px 0; }
-      .cta-final { padding:64px 24px; }
-      footer { padding:40px 24px; }
-      .footer-inner { flex-direction:column; align-items:flex-start; }
+      /* NAV */
+      nav { padding:0 20px; height:56px; }
+      .nav-links { display:none; }
+      .nav-mobile-cta { display:flex !important; }
+
+      /* PAGE HERO */
+      .page-hero { padding:100px 20px 80px; clip-path:none; margin-bottom:0; }
+      .page-hero h1 { font-size:clamp(1.9rem,7vw,3rem); }
+      .page-hero-wm { display:none; }
+
+      /* HISTOIRE */
+      .histoire { padding:72px 0 60px; }
+      .hist-grid { grid-template-columns:1fr; gap:36px; }
+      .sec-wrap { padding:0 20px; }
+      .sec-title { font-size:clamp(1.6rem,6vw,2.4rem); margin-bottom:28px; }
+
+      /* STATS BAND */
+      .stats-inner { grid-template-columns:1fr 1fr; gap:1px; padding:0 20px; background:rgba(255,255,255,.07); }
+      .sb-block { padding:24px 16px; border-left:none !important; background:var(--charcoal); }
+      .sb-num { font-size:clamp(2.2rem,9vw,3.5rem); }
+
+      /* VALEURS */
+      .valeurs { padding:64px 0; }
+      .val-grid { grid-template-columns:1fr; }
+
+      /* ÉQUIPE */
+      .equipe { padding:64px 0; }
+      .team-grid { grid-template-columns:1fr; }
+
+      /* CTA FINAL */
+      .cta-final { padding:64px 20px; }
+      .cta-wrap { grid-template-columns:1fr; gap:36px; padding:0; }
+      .cta-text h2 { font-size:clamp(1.8rem,7vw,2.8rem); }
+      .btn-canal-lg, .btn-outline-light { padding:16px 24px; }
+
+      /* FOOTER */
+      footer { padding:40px 20px; }
+      .footer-inner { flex-direction:column; align-items:flex-start; gap:16px; }
+      .footer-links { flex-wrap:wrap; gap:12px 20px; }
+    }
+
+    @media (max-width:480px) {
+      nav { padding:0 16px; }
+      .page-hero { padding:90px 16px 72px; }
+      .sec-wrap { padding:0 16px; }
+      .stats-inner { padding:0 16px; }
+      .sb-num { font-size:clamp(2rem,9vw,3rem); }
+      .cta-final { padding:52px 16px; }
+      footer { padding:32px 16px; }
+      .hist-aside { padding:28px 22px; }
     }
   </style>
 </head>
@@ -200,6 +240,7 @@
     <li><a href="/blog">Blog</a></li>
     <li><a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="nav-cta">Prendre rendez-vous</a></li>
   </ul>
+  <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" class="nav-mobile-cta" target="_blank" rel="noopener">Estimer →</a>
 </nav>
 
 <!-- PAGE HERO -->
