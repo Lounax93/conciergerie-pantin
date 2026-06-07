@@ -1,66 +1,366 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL60XQ455W"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YL60XQ455W');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Airbnb Pantin | Hostopia — Conseils propriétaires</title>
-  <meta name="description" content="Conseils, guides et stratégies pour les propriétaires Airbnb à Pantin. Par l'équipe Hostopia.">
+  <title>Blog | Conciergerie Airbnb Pantin — Guides propriétaires Canal de l'Ourcq</title>
+  <meta name="description" content="Guides Airbnb pour propriétaires à Pantin. Revenus canal, saisonnalité quartier créatif, réglementation 93 — tout ce que vous devez savoir pour rentabiliser votre bien.">
   <link rel="canonical" href="https://conciergeriepantin.fr/blog">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Inter',sans-serif; font-weight:400; color:#1C1C1C; background:#F3F0EA; overflow-x:hidden; }
+
+    :root {
+      --concrete:    #F3F0EA;
+      --stone:       #E6E0D6;
+      --charcoal:    #1C1C1C;
+      --charcoal-d:  #141414;
+      --canal:       #2F6F73;
+      --canal-dark:  #1D4F52;
+      --canal-light: #4A9EA3;
+      --copper:      #B86B3B;
+      --copper-dark: #8A4F28;
+      --creative:    #D9448F;
+      --border:      rgba(28,28,28,0.08);
+      --border-s:    rgba(28,28,28,0.14);
+      --muted:       rgba(28,28,28,0.5);
+    }
+
+    h1,h2,h3 { font-family:'Syne',sans-serif; letter-spacing:-0.03em; }
+
+    .beton { background-image:radial-gradient(circle, rgba(28,28,28,0.025) 1px, transparent 1px); background-size:3px 3px; }
+
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1); }
+    .reveal.visible { opacity:1; transform:none; }
+    .d1{transition-delay:.1s;} .d2{transition-delay:.2s;} .d3{transition-delay:.3s;}
+
+    /* ── NAV ── */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:var(--charcoal-d);
+      height:60px; padding:0 56px;
+      display:flex; align-items:center; justify-content:space-between;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:.94rem; color:#fff; text-decoration:none; letter-spacing:-.01em; }
+    .nav-logo em { color:var(--canal); font-style:normal; }
+    .nav-links { display:flex; gap:36px; list-style:none; align-items:center; }
+    .nav-links a { color:rgba(255,255,255,.45); text-decoration:none; font-size:.72rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; transition:color .2s; }
+    .nav-links a:hover, .nav-links a.active { color:rgba(255,255,255,.9); }
+    .nav-cta { background:var(--canal)!important; color:#fff!important; padding:8px 20px; border-radius:4px; text-transform:none!important; letter-spacing:-.01em!important; font-size:.82rem!important; font-family:'Syne',sans-serif; font-weight:700!important; transition:background .2s!important; }
+    .nav-cta:hover { background:var(--canal-dark)!important; }
+
+    /* ── WHATSAPP ── */
+    .wa-float { position:fixed; bottom:28px; right:28px; z-index:999; background:#25D366; color:#fff; width:54px; height:54px; border-radius:27px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,.35); transition:transform .25s, width .3s, padding .3s; overflow:hidden; white-space:nowrap; }
+    .wa-float svg { width:24px; height:24px; flex-shrink:0; }
+    .wa-label { display:none; font-size:.8rem; font-weight:500; margin-left:9px; margin-right:3px; font-family:'Inter',sans-serif; }
+    .wa-float:hover { transform:scale(1.04); width:auto; padding:0 16px 0 13px; }
+    .wa-float:hover .wa-label { display:inline; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding:140px 80px 100px;
+      background:var(--charcoal-d);
+      position:relative; overflow:hidden;
+      clip-path:polygon(0 0,100% 0,100% 88%,0 100%);
+      margin-bottom:-40px;
+    }
+    .page-hero::before {
+      content:''; position:absolute; inset:0;
+      background-image:radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size:3px 3px; pointer-events:none;
+    }
+    .page-hero::after {
+      content:''; position:absolute; inset:0;
+      background-image:repeating-linear-gradient(0deg,transparent 0px,transparent 63px,rgba(255,255,255,.015) 63px,rgba(255,255,255,.015) 64px);
+      pointer-events:none;
+    }
+    .page-hero-wm {
+      position:absolute; right:-2%; bottom:10%;
+      font-family:'Syne',sans-serif; font-weight:800;
+      font-size:clamp(100px,18vw,240px); line-height:0.88;
+      color:rgba(255,255,255,.018); letter-spacing:-.05em;
+      pointer-events:none; user-select:none; z-index:0;
+    }
+    .page-hero-inner { max-width:1320px; margin:0 auto; position:relative; z-index:2; }
+    .page-hero-eyebrow { font-size:.64rem; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--canal-light); margin-bottom:20px; display:flex; align-items:center; gap:14px; }
+    .page-hero-eyebrow::before { content:''; width:24px; height:1px; background:var(--canal); }
+    .page-hero h1 { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(2.4rem,4.5vw,4.5rem); color:#fff; line-height:1.05; letter-spacing:-.04em; margin-bottom:20px; max-width:700px; }
+    .page-hero h1 em { color:var(--canal); font-style:normal; }
+    .page-hero-sub { font-size:1rem; color:rgba(255,255,255,.45); line-height:1.75; max-width:480px; font-weight:300; }
+    .hero-canal-strip { position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--canal); opacity:.5; z-index:3; }
+
+    /* ── LAYOUT ── */
+    .sec-wrap { max-width:1320px; margin:0 auto; padding:0 80px; }
+    .sec-eyebrow { font-size:.65rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--canal); margin-bottom:12px; display:flex; align-items:center; gap:14px; }
+    .sec-eyebrow::before { content:''; width:24px; height:1px; background:var(--canal); }
+    .sec-title { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(1.9rem,3vw,2.8rem); color:var(--charcoal); line-height:1.12; margin-bottom:48px; }
+
+    /* ── COMING SOON HERO CARD ── */
+    .coming-section { background:var(--concrete); padding:96px 0 80px; }
+    .coming-card {
+      background:#fff; border:1px solid var(--border);
+      border-left:3px solid var(--canal);
+      padding:56px 56px 56px;
+      display:grid; grid-template-columns:1fr auto; gap:48px; align-items:center;
+      position:relative; overflow:hidden;
+    }
+    .coming-card::before {
+      content:'BIENTÔT';
+      position:absolute; right:-16px; top:50%; transform:translateY(-50%);
+      font-family:'Syne',sans-serif; font-size:clamp(60px,10vw,120px); font-weight:800;
+      color:rgba(28,28,28,.03); letter-spacing:-.04em; pointer-events:none; user-select:none;
+    }
+    .coming-badge { display:inline-flex; align-items:center; gap:10px; font-size:.64rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--canal); margin-bottom:18px; }
+    .coming-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--canal); animation:pulse 2.2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.7);} }
+    .coming-card h2 { font-family:'Syne',sans-serif; font-size:clamp(1.8rem,3.2vw,3rem); font-weight:800; color:var(--charcoal); line-height:1.1; margin-bottom:16px; }
+    .coming-card h2 em { color:var(--canal); font-style:normal; }
+    .coming-card p { font-size:.94rem; color:var(--muted); line-height:1.82; font-weight:300; max-width:520px; }
+    .coming-aside { text-align:right; flex-shrink:0; }
+    .coming-progress { width:120px; margin-left:auto; margin-bottom:16px; }
+    .progress-track { height:3px; background:var(--border); border-radius:2px; overflow:hidden; }
+    .progress-fill { height:100%; width:35%; background:var(--canal); border-radius:2px; }
+    .coming-aside-label { font-size:.64rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+    .coming-aside-pct { font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:var(--canal); line-height:1; margin-bottom:6px; }
+
+    /* ── TOPICS GRID ── */
+    .topics-section { background:var(--stone); padding:80px 0; }
+    .topics-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .topic-card {
+      background:rgba(255,255,255,.65); border:1px solid var(--border);
+      border-top:3px solid transparent;
+      padding:36px 28px; position:relative;
+      transition:box-shadow .3s, transform .25s, border-top-color .25s;
+    }
+    .topic-card:hover { box-shadow:0 14px 44px rgba(28,28,28,.09); transform:translateY(-3px); border-top-color:var(--canal); }
+    .topic-tag { font-size:.62rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--copper); margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+    .topic-tag::after { content:''; flex:1; height:1px; background:var(--border-s); }
+    .topic-card h3 { font-family:'Syne',sans-serif; font-size:1.08rem; font-weight:800; color:var(--charcoal); margin-bottom:12px; line-height:1.2; }
+    .topic-card p { font-size:.85rem; color:var(--muted); line-height:1.8; font-weight:300; margin-bottom:24px; }
+    .topic-soon { display:inline-flex; align-items:center; gap:8px; font-size:.64rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--canal); }
+    .topic-soon-line { width:16px; height:1px; background:var(--canal); }
+
+    /* ── NEWSLETTER ── */
+    .newsletter { background:var(--charcoal); padding:88px 0; position:relative; overflow:hidden; }
+    .newsletter::before { content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,transparent 0px,transparent 63px,rgba(255,255,255,.02) 63px,rgba(255,255,255,.02) 64px); pointer-events:none; }
+    .nl-inner { max-width:1320px; margin:0 auto; padding:0 80px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; position:relative; z-index:1; }
+    .nl-text p.sec-eyebrow { color:var(--canal-light); }
+    .nl-text p.sec-eyebrow::before { background:var(--canal); }
+    .nl-text h2 { font-family:'Syne',sans-serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:800; color:#fff; line-height:1.12; margin-bottom:14px; }
+    .nl-text h2 em { color:var(--canal); font-style:normal; }
+    .nl-text p.body { font-size:.9rem; color:rgba(255,255,255,.38); line-height:1.75; font-weight:300; }
+    .nl-form { display:flex; flex-direction:column; gap:12px; }
+    .nl-row { display:flex; gap:0; }
+    .nl-input {
+      flex:1; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
+      border-right:none; color:#fff; font-family:'Inter',sans-serif;
+      font-size:.9rem; padding:14px 20px; outline:none;
+      transition:border-color .25s, background .25s;
+    }
+    .nl-input::placeholder { color:rgba(255,255,255,.25); }
+    .nl-input:focus { border-color:var(--canal); background:rgba(47,111,115,.08); }
+    .nl-btn {
+      background:var(--canal); color:#fff; border:none; cursor:pointer;
+      padding:14px 28px; font-family:'Syne',sans-serif; font-size:.82rem; font-weight:700;
+      letter-spacing:-.01em; transition:background .25s; white-space:nowrap;
+    }
+    .nl-btn:hover { background:var(--canal-dark); }
+    .nl-note { font-size:.68rem; color:rgba(255,255,255,.22); line-height:1.6; }
+
+    /* ── CTA FINAL ── */
+    .cta-final { background:var(--concrete); padding:80px; border-top:1px solid var(--border); }
+    .cta-wrap { max-width:1320px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .cta-text h2 { font-family:'Syne',sans-serif; font-size:clamp(1.8rem,3vw,2.8rem); font-weight:800; color:var(--charcoal); line-height:1.08; letter-spacing:-.04em; margin-bottom:16px; }
+    .cta-text h2 em { color:var(--canal); font-style:normal; }
+    .cta-text p { font-size:.9rem; color:var(--muted); line-height:1.75; font-weight:300; }
+    .cta-actions { display:flex; flex-direction:column; justify-content:center; gap:14px; }
+    .btn-canal-lg { background:var(--canal); color:#fff; text-decoration:none; padding:18px 40px; font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; letter-spacing:-.01em; border-radius:4px; transition:background .25s, transform .2s; display:inline-block; text-align:center; }
+    .btn-canal-lg:hover { background:var(--canal-dark); transform:translateY(-2px); }
+    .btn-outline-dark { background:transparent; color:var(--charcoal); text-decoration:none; padding:17px 40px; font-size:.92rem; font-weight:400; border:1px solid var(--border-s); border-radius:4px; transition:border-color .25s, color .25s; display:inline-block; text-align:center; }
+    .btn-outline-dark:hover { border-color:var(--canal); color:var(--canal); }
+
+    /* ── FOOTER ── */
+    footer { background:var(--charcoal-d); padding:48px 80px; border-top:1px solid rgba(255,255,255,.05); }
+    .footer-inner { max-width:1320px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+    .footer-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:.9rem; color:rgba(255,255,255,.35); }
+    .footer-logo em { color:var(--canal); font-style:normal; }
+    .footer-links { display:flex; gap:28px; }
+    .footer-links a { color:rgba(255,255,255,.28); text-decoration:none; font-size:.72rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; transition:color .2s; }
+    .footer-links a:hover { color:rgba(255,255,255,.7); }
+    .footer-copy { font-size:.68rem; color:rgba(255,255,255,.16); }
+
+    @media (max-width:960px) {
+      nav { padding:0 24px; } .nav-links { display:none; }
+      .page-hero { padding:120px 24px 80px; clip-path:none; margin-bottom:0; }
+      .coming-card { grid-template-columns:1fr; padding:36px 28px; }
+      .coming-aside { text-align:left; }
+      .coming-progress { margin-left:0; }
+      .topics-grid { grid-template-columns:1fr; }
+      .nl-inner, .cta-wrap { grid-template-columns:1fr; gap:40px; }
+      .nl-inner { padding:0 24px; }
+      .sec-wrap { padding:0 24px; }
+      .cta-final { padding:64px 24px; }
+      footer { padding:40px 24px; }
+      .footer-inner { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header scrolled">
-    <div class="container">
-      <div class="header-inner">
-        <a href="../"><img src="../assets/logo-blanc.png" alt="Hostopia" class="header-logo"></a>
-        <nav class="header-nav">
-          <a href="../">Accueil</a>
-          <a href="../qui-sommes-nous.html">Qui sommes-nous</a>
-          <a href="." style="color:var(--teal-light);">Blog</a>
-        </nav>
-        <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" class="btn btn-primary header-cta" target="_blank" rel="noopener">Prendre RDV</a>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Conciergerie <em>Pantin</em></a>
+  <ul class="nav-links">
+    <li><a href="/">Accueil</a></li>
+    <li><a href="/qui-sommes-nous">Qui sommes-nous</a></li>
+    <li><a href="/blog" class="active">Blog</a></li>
+    <li><a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="nav-cta">Prendre rendez-vous</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-wm">BLOG</div>
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Ressources propriétaires</p>
+    <h1>Guides Airbnb pour<br>propriétaires à <em>Pantin</em></h1>
+    <p class="page-hero-sub">Canal de l'Ourcq, Magasins Généraux, quartier créatif — tout ce que vous devez savoir pour rentabiliser votre bien à Pantin.</p>
+  </div>
+  <div class="hero-canal-strip"></div>
+</section>
+
+<!-- COMING SOON CARD -->
+<section class="coming-section beton" style="padding-top:120px;">
+  <div class="sec-wrap">
+    <div class="coming-card reveal">
+      <div>
+        <div class="coming-badge">
+          <div class="coming-badge-dot"></div>
+          En cours de rédaction
+        </div>
+        <h2>Le guide complet<br>du propriétaire <em>Pantin</em></h2>
+        <p>Revenus réels, saisonnalité, réglementation 93, quartiers porteurs — un guide exhaustif par l'équipe qui gère des biens ici depuis 2019. Inscrivez-vous pour être prévenu à la publication.</p>
       </div>
-    </div>
-  </header>
-  <style>
-    .blog-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:28px;margin-top:48px; }
-  </style>
-  <main style="padding-top:80px;">
-    <section class="section" style="background:var(--grey-100);padding:72px 0 56px;">
-      <div class="container" style="text-align:center;">
-        <span class="badge">Blog Airbnb Pantin</span>
-        <div class="divider divider-center"></div>
-        <h1 style="margin-bottom:16px;">Conseils pour propriétaires Airbnb à Pantin</h1>
-        <p style="color:var(--grey-600);font-size:18px;max-width:50ch;margin:0 auto;">Guides pratiques, estimations de revenus et stratégies Airbnb pour les propriétaires à Pantin.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="blog-coming-soon" style="border:2px dashed var(--grey-200);border-radius:var(--radius-xl);padding:64px 40px;text-align:center;background:rgba(255,255,255,0.6);">
-          <div style="font-size:48px;margin-bottom:20px;">✍️</div>
-          <h3>Articles à venir</h3>
-          <p style="color:var(--grey-600);max-width:50ch;margin:0 auto;">Nos experts préparent des guides pratiques sur l'investissement Airbnb à Pantin.</p>
+      <div class="coming-aside">
+        <div class="coming-aside-pct">35%</div>
+        <div class="coming-aside-label">En cours</div>
+        <div class="coming-progress">
+          <div class="progress-track"><div class="progress-fill"></div></div>
         </div>
       </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom" style="border-top:none;padding-top:0;">
-        <p>&copy; 2026 Hostopia. Tous droits réservés.</p>
-        <p>Pantin · Île-de-France</p>
+    </div>
+  </div>
+</section>
+
+<!-- TOPICS PREVIEW -->
+<section class="topics-section">
+  <div class="sec-wrap">
+    <p class="sec-eyebrow reveal">Prochains articles</p>
+    <h2 class="sec-title reveal d1">Ce que vous allez apprendre</h2>
+    <div class="topics-grid">
+
+      <div class="topic-card reveal d1">
+        <div class="topic-tag">Revenus</div>
+        <h3>Combien gagne un T2 sur le canal de l'Ourcq en Airbnb ?</h3>
+        <p>Analyse basée sur les données réelles de nos logements gérés : revenus moyens, saisonnalité, tarifs nuit, taux d'occupation mensuel sur 24 mois.</p>
+        <span class="topic-soon"><span class="topic-soon-line"></span>Bientôt disponible</span>
+      </div>
+
+      <div class="topic-card reveal d2">
+        <div class="topic-tag">Saisonnalité</div>
+        <h3>Saisons Airbnb à Pantin : quand les Magasins Généraux font exploser la demande</h3>
+        <p>Événements culturels, fashion week, festivals canal — le calendrier complet des pics de demande et comment en profiter pour maximiser vos revenus.</p>
+        <span class="topic-soon"><span class="topic-soon-line"></span>Bientôt disponible</span>
+      </div>
+
+      <div class="topic-card reveal d3">
+        <div class="topic-tag">Réglementation</div>
+        <h3>Airbnb à Pantin en 2025 : ce que dit la réglementation en Seine-Saint-Denis</h3>
+        <p>Numéro d'enregistrement, règles de la copropriété, déclaration en mairie — tout ce que vous devez savoir avant de mettre votre bien en location courte durée dans le 93.</p>
+        <span class="topic-soon"><span class="topic-soon-line"></span>Bientôt disponible</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="nl-inner">
+    <div class="nl-text">
+      <p class="sec-eyebrow reveal" style="color:var(--canal-light);margin-bottom:12px;">Restez informé</p>
+      <h2 class="reveal d1">Les guides <em>Pantin</em>,<br>en avant-première</h2>
+      <p class="body reveal d2">Propriétaire à Pantin ? Recevez nos analyses de marché, guides réglementaires et études de cas directement dans votre boîte mail. Aucun spam, désabonnement en un clic.</p>
+    </div>
+    <div class="reveal d2">
+      <form class="nl-form" onsubmit="return false;">
+        <div class="nl-row">
+          <input type="email" class="nl-input" placeholder="votre@email.com" required>
+          <button type="submit" class="nl-btn">M'inscrire →</button>
+        </div>
+        <p class="nl-note">En vous inscrivant, vous acceptez de recevoir nos contenus par email. Désabonnement immédiat à tout moment.</p>
+      </form>
+      <!-- Canal illustration inline -->
+      <div style="margin-top:32px; padding-top:20px; border-top:1px solid rgba(255,255,255,.06);">
+        <svg viewBox="0 0 320 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;opacity:.4;" aria-hidden="true">
+          <line x1="0" y1="8" x2="320" y2="8" stroke="rgba(47,111,115,.5)" stroke-width="1"/>
+          <line x1="0" y1="18" x2="320" y2="18" stroke="rgba(47,111,115,.3)" stroke-width="1"/>
+          <line x1="0" y1="26" x2="320" y2="26" stroke="rgba(47,111,115,.2)" stroke-width="1"/>
+          <line x1="0" y1="33" x2="320" y2="33" stroke="rgba(47,111,115,.12)" stroke-width="1"/>
+          <text x="160" y="22" font-family="'Syne',sans-serif" font-size="7" font-weight="600" fill="rgba(47,111,115,.7)" letter-spacing="3" text-anchor="middle">CANAL DE L'OURCQ</text>
+        </svg>
       </div>
     </div>
-  </footer>
-  <a href="https://api.whatsapp.com/send/?phone=33767209266" class="whatsapp-float" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span class="wa-label">Discutons sur WhatsApp</span>
-  </a>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-wrap">
+    <div class="cta-text reveal">
+      <h2>Votre bien mérite<br>une gestion <em>locale</em></h2>
+      <p>Pas de lecture de plus — estimez vos revenus potentiels en 2 minutes. Notre simulateur est calibré sur les données réelles du marché Pantin.</p>
+    </div>
+    <div class="cta-actions reveal d2">
+      <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" target="_blank" rel="noopener" class="btn-canal-lg">Estimer mes revenus →</a>
+      <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="btn-outline-dark">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Conciergerie <em>Pantin</em></div>
+    <div class="footer-links">
+      <a href="/">Accueil</a>
+      <a href="/qui-sommes-nous">Qui sommes-nous</a>
+      <a href="/blog">Blog</a>
+    </div>
+    <div class="footer-copy">© 2025 Hostopia · Conciergerie Airbnb Pantin</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/33767209266" target="_blank" rel="noopener" class="wa-float" aria-label="Nous contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-label">WhatsApp</span>
+</a>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold:0.12 });
+  reveals.forEach(r => io.observe(r));
+</script>
 </body>
 </html>

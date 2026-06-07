@@ -1,628 +1,433 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL60XQ455W"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YL60XQ455W');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Primary -->
-  <title>Qui sommes-nous | Hostopia Conciergerie Airbnb Pantin — 15 ans d'expertise</title>
-  <meta name="description" content="Découvrez l'équipe Hostopia : 15 ans d'expertise immobilière, 20+ logements en gestion en Seine-et-Marne. Votre conciergerie Airbnb de confiance à Pantin et Disneyland Paris.">
-  <meta name="robots" content="index, follow">
+  <title>Qui sommes-nous | Conciergerie Airbnb Pantin — Canal de l'Ourcq</title>
+  <meta name="description" content="L'équipe qui connaît Pantin par cœur. Canal de l'Ourcq, Magasins Généraux, ateliers créatifs — gestion Airbnb premium pour les propriétaires du 93.">
   <link rel="canonical" href="https://conciergeriepantin.fr/qui-sommes-nous">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://conciergeriepantin.fr/qui-sommes-nous">
-  <meta property="og:title" content="Qui sommes-nous | Hostopia Conciergerie Pantin">
-  <meta property="og:description" content="15 ans d'expertise, 20+ logements en Seine-et-Marne. L'équipe Hostopia se présente.">
-  <meta property="og:image" content="https://conciergeriepantin.fr/assets/og-image.jpg">
-  <meta property="og:locale" content="fr_FR">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Qui sommes-nous | Hostopia Conciergerie Pantin">
-  <meta name="twitter:description" content="15 ans d'expertise, 20+ logements en gestion dans le 77.">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles/base.css">
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "Qui sommes-nous — Hostopia Conciergerie Pantin",
-    "url": "https://conciergeriepantin.fr/qui-sommes-nous",
-    "description": "15 ans d'expertise en gestion locative, plus de 20 logements en Seine-et-Marne.",
-    "mainEntity": {
-      "@type": "LocalBusiness",
-      "name": "Hostopia Conciergerie Pantin",
-      "foundingDate": "2010",
-      "areaServed": ["Serris", "Val d'Europe", "Chessy", "Marne-la-Vallée"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Serris",
-        "postalCode": "77700",
-        "addressRegion": "Seine-et-Marne",
-        "addressCountry": "FR"
-      }
-    }
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ── Page-specific: Qui sommes-nous ── */
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Inter',sans-serif; font-weight:400; color:#1C1C1C; background:#F3F0EA; overflow-x:hidden; }
 
+    :root {
+      --concrete:    #F3F0EA;
+      --stone:       #E6E0D6;
+      --charcoal:    #1C1C1C;
+      --charcoal-d:  #141414;
+      --canal:       #2F6F73;
+      --canal-dark:  #1D4F52;
+      --canal-light: #4A9EA3;
+      --copper:      #B86B3B;
+      --copper-dark: #8A4F28;
+      --creative:    #D9448F;
+      --border:      rgba(28,28,28,0.08);
+      --border-s:    rgba(28,28,28,0.14);
+      --muted:       rgba(28,28,28,0.5);
+    }
+
+    h1,h2,h3 { font-family:'Syne',sans-serif; letter-spacing:-0.03em; }
+
+    .beton { background-image:radial-gradient(circle, rgba(28,28,28,0.025) 1px, transparent 1px); background-size:3px 3px; }
+    .hachure { position:relative; }
+    .hachure::after { content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,transparent 0px,transparent 63px,rgba(28,28,28,0.04) 63px,rgba(28,28,28,0.04) 64px); pointer-events:none; z-index:0; }
+
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1); }
+    .reveal.visible { opacity:1; transform:none; }
+    .d1{transition-delay:.1s;} .d2{transition-delay:.2s;} .d3{transition-delay:.3s;} .d4{transition-delay:.4s;}
+
+    /* ── NAV ── */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:var(--charcoal-d);
+      height:60px; padding:0 56px;
+      display:flex; align-items:center; justify-content:space-between;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:.94rem; color:#fff; text-decoration:none; letter-spacing:-.01em; }
+    .nav-logo em { color:var(--canal); font-style:normal; }
+    .nav-links { display:flex; gap:36px; list-style:none; align-items:center; }
+    .nav-links a { color:rgba(255,255,255,.45); text-decoration:none; font-size:.72rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; transition:color .2s; }
+    .nav-links a:hover, .nav-links a.active { color:rgba(255,255,255,.9); }
+    .nav-cta { background:var(--canal)!important; color:#fff!important; padding:8px 20px; border-radius:4px; text-transform:none!important; letter-spacing:-.01em!important; font-size:.82rem!important; font-family:'Syne',sans-serif; font-weight:700!important; transition:background .2s!important; }
+    .nav-cta:hover { background:var(--canal-dark)!important; }
+
+    /* ── WHATSAPP ── */
+    .wa-float { position:fixed; bottom:28px; right:28px; z-index:999; background:#25D366; color:#fff; width:54px; height:54px; border-radius:27px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,.35); transition:transform .25s, width .3s, padding .3s; overflow:hidden; white-space:nowrap; }
+    .wa-float svg { width:24px; height:24px; flex-shrink:0; }
+    .wa-label { display:none; font-size:.8rem; font-weight:500; margin-left:9px; margin-right:3px; font-family:'Inter',sans-serif; }
+    .wa-float:hover { transform:scale(1.04); width:auto; padding:0 16px 0 13px; }
+    .wa-float:hover .wa-label { display:inline; }
+
+    /* ── PAGE HERO ── */
     .page-hero {
-      background: var(--noir);
-      padding: 160px 0 96px;
-      position: relative;
-      overflow: hidden;
+      padding:140px 80px 100px;
+      background:var(--charcoal-d);
+      position:relative; overflow:hidden;
+      clip-path:polygon(0 0,100% 0,100% 88%,0 100%);
+      margin-bottom:-40px;
     }
-
-    .page-hero .orb-1 { width: 500px; height: 500px; top: -80px; right: -60px; }
-    .page-hero .orb-2 { width: 350px; height: 350px; bottom: -60px; left: -40px; }
-
-    .page-hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 680px;
+    .page-hero::before {
+      content:''; position:absolute; inset:0;
+      background-image:radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size:3px 3px; pointer-events:none;
     }
-
-    .page-hero h1 {
-      color: var(--blanc);
-      margin: 24px 0 20px;
+    .page-hero::after {
+      content:''; position:absolute; inset:0;
+      background-image:repeating-linear-gradient(0deg,transparent 0px,transparent 63px,rgba(255,255,255,.015) 63px,rgba(255,255,255,.015) 64px);
+      pointer-events:none;
     }
-
-    .page-hero h1 span {
-      background: linear-gradient(135deg, var(--teal-light), var(--orange-warm));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .page-hero-wm {
+      position:absolute; right:-2%; bottom:10%;
+      font-family:'Syne',sans-serif; font-weight:800;
+      font-size:clamp(100px,18vw,240px); line-height:0.88;
+      color:rgba(255,255,255,.018); letter-spacing:-.05em;
+      pointer-events:none; user-select:none; z-index:0;
     }
+    .page-hero-inner { max-width:1320px; margin:0 auto; position:relative; z-index:2; }
+    .page-hero-eyebrow { font-size:.64rem; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--canal-light); margin-bottom:20px; display:flex; align-items:center; gap:14px; }
+    .page-hero-eyebrow::before { content:''; width:24px; height:1px; background:var(--canal); }
+    .page-hero h1 { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(2.6rem,5vw,5rem); color:#fff; line-height:1.05; letter-spacing:-.04em; margin-bottom:20px; max-width:700px; }
+    .page-hero h1 em { color:var(--canal); font-style:normal; }
+    .page-hero-sub { font-size:1rem; color:rgba(255,255,255,.45); line-height:1.75; max-width:480px; font-weight:300; }
+    .hero-canal-strip { position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--canal); opacity:.5; z-index:3; }
 
-    .page-hero p {
-      color: rgba(255,255,255,0.65);
-      font-size: 18px;
+    /* ── SECTIONS ── */
+    .sec-wrap { max-width:1320px; margin:0 auto; padding:0 80px; }
+    .sec-eyebrow { font-size:.65rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--canal); margin-bottom:12px; display:flex; align-items:center; gap:14px; }
+    .sec-eyebrow::before { content:''; width:24px; height:1px; background:var(--canal); }
+    .sec-title { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(1.9rem,3vw,2.8rem); color:var(--charcoal); line-height:1.12; margin-bottom:56px; }
+
+    /* ── HISTOIRE ── */
+    .histoire { background:var(--concrete); padding:96px 0 88px; }
+    .hist-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
+    .hist-text p { font-size:.94rem; color:var(--muted); line-height:1.88; margin-bottom:20px; font-weight:300; }
+    .hist-text p strong { color:var(--charcoal); font-weight:600; }
+    .hist-aside { padding:40px 36px; background:rgba(255,255,255,.72); border:1px solid var(--border); border-left:3px solid var(--canal); }
+    .hist-year { font-family:'Syne',sans-serif; font-size:clamp(3.5rem,8vw,7rem); font-weight:800; color:var(--canal); line-height:.9; letter-spacing:-.06em; margin-bottom:16px; opacity:.22; }
+    .hist-aside-title { font-family:'Syne',sans-serif; font-size:1.15rem; font-weight:800; color:var(--charcoal); margin-bottom:12px; }
+    .hist-aside p { font-size:.86rem; color:var(--muted); line-height:1.78; font-weight:300; }
+    .hist-tag { display:inline-block; margin-top:18px; font-size:.64rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--canal); border:1px solid rgba(47,111,115,.35); padding:6px 14px; }
+
+    /* ── STATS ── */
+    .stats-band { background:var(--charcoal); padding:56px 0; }
+    .stats-inner { max-width:1320px; margin:0 auto; padding:0 80px; display:grid; grid-template-columns:repeat(4,1fr); }
+    .sb-block { padding:0 40px; border-left:1px solid rgba(255,255,255,.07); }
+    .sb-block:first-child { border-left:none; padding-left:0; }
+    .sb-num { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(2.8rem,4.5vw,4.5rem); color:var(--canal); display:block; line-height:.9; letter-spacing:-.06em; margin-bottom:12px; }
+    .sb-lbl { font-size:.64rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.35); line-height:1.55; }
+
+    /* ── VALEURS ── */
+    .valeurs { background:var(--stone); padding:96px 0; }
+    .val-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .val-card {
+      background:rgba(255,255,255,.6); border:1px solid var(--border); border-left:3px solid var(--canal);
+      padding:40px 30px; position:relative; transition:box-shadow .3s, transform .25s;
     }
+    .val-card:hover { box-shadow:0 14px 44px rgba(28,28,28,.09); transform:translateY(-3px); }
+    .val-num { font-family:'Syne',sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--copper); margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+    .val-num::after { content:''; flex:1; height:1px; background:var(--border-s); }
+    .val-card h3 { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:800; color:var(--charcoal); margin-bottom:12px; }
+    .val-card p { font-size:.86rem; color:var(--muted); line-height:1.82; font-weight:300; }
 
-    /* Story Section */
-    .story-section {
-      background: var(--blanc);
+    /* ── ÉQUIPE ── */
+    .equipe { background:var(--concrete); padding:96px 0; }
+    .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .team-card {
+      background:#fff; border:1px solid var(--border);
+      transition:box-shadow .3s, transform .25s; overflow:hidden;
     }
+    .team-card:hover { box-shadow:0 14px 44px rgba(28,28,28,.1); transform:translateY(-4px); }
+    .team-avatar { width:100%; aspect-ratio:1/1; background:var(--charcoal-d); position:relative; overflow:hidden; }
+    .team-info { padding:28px 24px; }
+    .team-info h3 { font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:var(--charcoal); margin-bottom:4px; }
+    .team-role { font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--canal); margin-bottom:12px; }
+    .team-info p { font-size:.84rem; color:var(--muted); line-height:1.72; font-weight:300; }
 
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
+    /* ── CTA FINAL ── */
+    .cta-final { background:var(--charcoal-d); padding:96px 80px; border-top:1px solid rgba(255,255,255,.04); position:relative; overflow:hidden; }
+    .cta-final::after { content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,transparent 0px,transparent 63px,rgba(255,255,255,.015) 63px,rgba(255,255,255,.015) 64px); pointer-events:none; }
+    .cta-wrap { max-width:1320px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; position:relative; z-index:1; }
+    .cta-text h2 { font-family:'Syne',sans-serif; font-size:clamp(2rem,3.6vw,3.4rem); font-weight:800; color:#fff; line-height:1.08; letter-spacing:-.04em; margin-bottom:16px; }
+    .cta-text h2 em { color:var(--canal); font-style:normal; }
+    .cta-text p { font-size:.92rem; color:rgba(255,255,255,.38); line-height:1.75; font-weight:300; }
+    .cta-actions { display:flex; flex-direction:column; justify-content:center; gap:14px; }
+    .btn-canal-lg { background:var(--canal); color:#fff; text-decoration:none; padding:18px 40px; font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; letter-spacing:-.01em; border-radius:4px; transition:background .25s, transform .2s; display:inline-block; text-align:center; }
+    .btn-canal-lg:hover { background:var(--canal-dark); transform:translateY(-2px); }
+    .btn-outline-light { background:transparent; color:rgba(255,255,255,.65); text-decoration:none; padding:17px 40px; font-size:.92rem; font-weight:400; border:1px solid rgba(255,255,255,.15); border-radius:4px; transition:border-color .25s, color .25s; display:inline-block; text-align:center; }
+    .btn-outline-light:hover { border-color:rgba(255,255,255,.45); color:#fff; }
 
-    .story-text h2 {
-      margin-bottom: 24px;
-    }
+    /* ── FOOTER ── */
+    footer { background:var(--charcoal-d); padding:48px 80px; border-top:1px solid rgba(255,255,255,.05); }
+    .footer-inner { max-width:1320px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+    .footer-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:.9rem; color:rgba(255,255,255,.35); }
+    .footer-logo em { color:var(--canal); font-style:normal; }
+    .footer-links { display:flex; gap:28px; }
+    .footer-links a { color:rgba(255,255,255,.28); text-decoration:none; font-size:.72rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; transition:color .2s; }
+    .footer-links a:hover { color:rgba(255,255,255,.7); }
+    .footer-copy { font-size:.68rem; color:rgba(255,255,255,.16); }
 
-    .story-text p {
-      color: var(--grey-600);
-      font-size: 17px;
-      margin-bottom: 20px;
-      line-height: 1.75;
-    }
-
-    .story-visual {
-      position: relative;
-    }
-
-    .story-card-big {
-      padding: 48px;
-      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
-      border-radius: var(--radius-xl);
-      color: var(--blanc);
-    }
-
-    .story-card-big .big-number {
-      font-family: var(--font-display);
-      font-size: 6rem;
-      font-weight: 800;
-      line-height: 1;
-      opacity: 0.2;
-    }
-
-    .story-card-big h3 {
-      font-size: 1.8rem;
-      margin-top: -20px;
-      margin-bottom: 16px;
-    }
-
-    .story-card-big p {
-      color: rgba(255,255,255,0.75);
-      font-size: 16px;
-    }
-
-    .story-float-card {
-      position: absolute;
-      bottom: -28px;
-      right: -28px;
-      background: var(--blanc);
-      border-radius: var(--radius-lg);
-      padding: 24px 28px;
-      box-shadow: var(--shadow-lg);
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .story-float-card .float-number {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--teal), var(--orange));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1;
-    }
-
-    .story-float-card .float-label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--grey-600);
-      max-width: 100px;
-      line-height: 1.4;
-    }
-
-    @media (max-width: 900px) {
-      .story-grid { grid-template-columns: 1fr; gap: 48px; }
-      .story-float-card { position: static; margin-top: 20px; display: inline-flex; }
-    }
-
-    /* Values Section */
-    .values-section {
-      background: var(--grey-100);
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-top: 48px;
-    }
-
-    .value-card {
-      padding: 40px 32px;
-      text-align: center;
-    }
-
-    .value-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, rgba(107,168,160,0.12), rgba(107,168,160,0.06));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-      font-size: 28px;
-    }
-
-    .value-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    .value-card p {
-      color: var(--grey-600);
-      font-size: 15px;
-      line-height: 1.7;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 900px) {
-      .values-grid { grid-template-columns: 1fr; }
-    }
-
-    /* Timeline */
-    .timeline-section {
-      background: var(--blanc);
-    }
-
-    .timeline {
-      position: relative;
-      max-width: 700px;
-      margin: 48px auto 0;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--teal), var(--orange));
-      transform: translateX(-50%);
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 24px;
-      align-items: center;
-      margin-bottom: 48px;
-    }
-
-    .timeline-item:nth-child(even) .timeline-content {
-      grid-column: 3;
-      grid-row: 1;
-    }
-
-    .timeline-item:nth-child(even) .timeline-empty {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .timeline-dot {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: var(--teal);
-      border: 3px solid var(--blanc);
-      box-shadow: 0 0 0 3px var(--teal);
-      grid-column: 2;
-      z-index: 1;
-    }
-
-    .timeline-content {
-      padding: 24px;
-      background: var(--grey-100);
-      border-radius: var(--radius-md);
-    }
-
-    .timeline-year {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--teal-dark);
-      margin-bottom: 6px;
-    }
-
-    .timeline-content h4 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
-    .timeline-content p {
-      font-size: 14px;
-      color: var(--grey-600);
-    }
-
-    /* Timeline mobile */
-    @media (max-width: 640px) {
-      .timeline::before { left: 12px; transform: none; }
-      .timeline-item {
-        grid-template-columns: 28px 1fr;
-        gap: 14px;
-        margin-bottom: 28px;
-      }
-      .timeline-empty { display: none !important; }
-      .timeline-dot {
-        grid-column: 1 !important;
-        grid-row: 1 !important;
-        align-self: start;
-        margin-top: 4px;
-      }
-      .timeline-content {
-        grid-column: 2 !important;
-        grid-row: 1 !important;
-      }
-    }
-
-    /* Zone Section */
-    .zone-section {
-      background: var(--noir);
-    }
-
-    .zone-tags {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-
-    .zone-tag {
-      padding: 12px 24px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 100px;
-      font-size: 15px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.8);
-      transition: var(--transition);
-    }
-
-    .zone-tag:hover,
-    .zone-tag.primary {
-      background: rgba(107,168,160,0.15);
-      border-color: var(--teal);
-      color: var(--teal-light);
+    @media (max-width:960px) {
+      nav { padding:0 24px; } .nav-links { display:none; }
+      .page-hero { padding:120px 24px 80px; clip-path:none; margin-bottom:0; }
+      .hist-grid, .cta-wrap { grid-template-columns:1fr; gap:40px; }
+      .stats-inner { grid-template-columns:1fr 1fr; gap:0; padding:0 24px; }
+      .sb-block { padding:24px 20px; border-left:none; border-top:1px solid rgba(255,255,255,.07); }
+      .val-grid, .team-grid { grid-template-columns:1fr; }
+      .sec-wrap { padding:0 24px; }
+      .valeurs, .equipe { padding:64px 0; }
+      .cta-final { padding:64px 24px; }
+      footer { padding:40px 24px; }
+      .footer-inner { flex-direction:column; align-items:flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ─── Header ─────────────────────────── -->
-  <header class="site-header scrolled" id="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="/">
-          <img src="assets/logo-blanc.png" alt="Hostopia" class="header-logo">
-        </a>
-        <nav class="header-nav" aria-label="Navigation principale">
-          <a href="/">Accueil</a>
-          <a href="qui-sommes-nous.html" style="color: var(--teal-light);">Qui sommes-nous</a>
-          <a href="/blog">Blog</a>
-        </nav>
-        <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" class="btn btn-primary header-cta" target="_blank" rel="noopener">
-          Prendre RDV
-        </a>
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Conciergerie <em>Pantin</em></a>
+  <ul class="nav-links">
+    <li><a href="/">Accueil</a></li>
+    <li><a href="/qui-sommes-nous" class="active">Qui sommes-nous</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="nav-cta">Prendre rendez-vous</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-wm">PANTIN</div>
+  <div class="page-hero-inner">
+    <p class="page-hero-eyebrow">Notre histoire</p>
+    <h1>L'équipe qui connaît<br><em>Pantin</em> par cœur</h1>
+    <p class="page-hero-sub">Issus du canal, des ateliers et des halles industrielles — nous gérons votre bien Airbnb avec la précision d'un collectif créatif et la rigueur d'une agence premium.</p>
+  </div>
+  <div class="hero-canal-strip"></div>
+</section>
+
+<!-- HISTOIRE -->
+<section class="histoire beton" style="padding-top:130px;">
+  <div class="sec-wrap">
+    <div class="hist-grid">
+      <div class="hist-text">
+        <p class="sec-eyebrow reveal">Notre histoire</p>
+        <h2 class="sec-title reveal d1" style="margin-bottom:32px;">Nés au bord<br>du canal</h2>
+        <p class="reveal d2"><strong>Pantin n'est pas une destination — c'est un terrain d'invention.</strong> Des Magasins Généraux aux ateliers du 9 bis, des quais de l'Ourcq à la Plaine Saint-Denis, ce territoire en pleine recomposition attire une nouvelle vague de créateurs, d'entrepreneurs et d'investisseurs.</p>
+        <p class="reveal d3">Nous avons lancé notre conciergerie ici, en 2019, parce que nous y vivons. Nous connaissons les événements au Canal, les saisons des galeries, les week-ends de Villette, le flux des studios en face de l'eau. Cette connaissance se traduit en taux d'occupation et en revenus.</p>
+        <p class="reveal d3">Aujourd'hui, nous gérons plus de 20 logements en Île-de-France sous la marque <strong>Hostopia</strong> — avec une expertise particulière sur Pantin et le 93. Chaque bien est traité comme s'il était le nôtre.</p>
+      </div>
+      <div class="reveal d2">
+        <div class="hist-aside">
+          <div class="hist-year">2019</div>
+          <h3 class="hist-aside-title">Premier logement géré à Pantin</h3>
+          <p>Un T2 canal, 18 mois d'occupation quasi-continue, propriétaire convaincu. C'est comme ça que tout a commencé : un bien, bien géré, dans le bon territoire.</p>
+          <div style="margin-top:24px; padding-top:20px; border-top:1px solid rgba(28,28,28,.08);">
+            <p style="font-size:.84rem; color:var(--muted); font-weight:300; line-height:1.72;">Aujourd'hui, notre équipe terrain est basée à Pantin. Réponse en moins de 30 minutes. Présence physique à moins de 15 minutes de tous nos biens.</p>
+          </div>
+          <span class="hist-tag">Canal de l'Ourcq · Pantin · 93</span>
+        </div>
+        <!-- Industrial SVG illustration -->
+        <svg viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg" style="margin-top:20px; width:100%; opacity:.55;" aria-hidden="true">
+          <rect x="0" y="120" width="420" height="40" fill="none" stroke="rgba(47,111,115,.25)" stroke-width="1"/>
+          <line x1="0" y1="130" x2="420" y2="130" stroke="rgba(47,111,115,.15)" stroke-width="1"/>
+          <line x1="0" y1="142" x2="420" y2="142" stroke="rgba(47,111,115,.1)" stroke-width="1"/>
+          <line x1="0" y1="154" x2="420" y2="154" stroke="rgba(47,111,115,.07)" stroke-width="1"/>
+          <rect x="20" y="40" width="120" height="82" fill="none" stroke="rgba(28,28,28,.18)" stroke-width="1"/>
+          <rect x="30" y="48" width="22" height="18" fill="none" stroke="rgba(47,111,115,.3)" stroke-width="1"/>
+          <rect x="62" y="48" width="22" height="18" fill="none" stroke="rgba(47,111,115,.3)" stroke-width="1"/>
+          <rect x="94" y="48" width="22" height="18" fill="none" stroke="rgba(47,111,115,.3)" stroke-width="1"/>
+          <rect x="30" y="78" width="22" height="18" fill="none" stroke="rgba(47,111,115,.3)" stroke-width="1"/>
+          <rect x="62" y="78" width="22" height="18" fill="none" stroke="rgba(47,111,115,.3)" stroke-width="1"/>
+          <rect x="94" y="78" width="22" height="18" fill="none" stroke="rgba(184,107,59,.25)" stroke-width="1"/>
+          <rect x="180" y="20" width="80" height="102" fill="none" stroke="rgba(28,28,28,.14)" stroke-width="1"/>
+          <rect x="188" y="30" width="14" height="14" fill="none" stroke="rgba(47,111,115,.25)" stroke-width="1"/>
+          <rect x="208" y="30" width="14" height="14" fill="none" stroke="rgba(47,111,115,.25)" stroke-width="1"/>
+          <rect x="228" y="30" width="14" height="14" fill="rgba(47,111,115,.08)" stroke="rgba(47,111,115,.3)" stroke-width="1"/>
+          <rect x="188" y="52" width="14" height="14" fill="rgba(184,107,59,.06)" stroke="rgba(184,107,59,.2)" stroke-width="1"/>
+          <rect x="208" y="52" width="14" height="14" fill="none" stroke="rgba(47,111,115,.25)" stroke-width="1"/>
+          <rect x="228" y="52" width="14" height="14" fill="none" stroke="rgba(47,111,115,.25)" stroke-width="1"/>
+          <rect x="188" y="74" width="14" height="14" fill="none" stroke="rgba(47,111,115,.25)" stroke-width="1"/>
+          <rect x="208" y="74" width="14" height="14" fill="rgba(47,111,115,.08)" stroke="rgba(47,111,115,.3)" stroke-width="1"/>
+          <rect x="228" y="74" width="14" height="14" fill="none" stroke="rgba(47,111,115,.25)" stroke-width="1"/>
+          <rect x="300" y="0" width="50" height="122" fill="none" stroke="rgba(28,28,28,.1)" stroke-width="1"/>
+          <rect x="308" y="10" width="10" height="10" fill="none" stroke="rgba(47,111,115,.2)" stroke-width="1"/>
+          <rect x="326" y="10" width="10" height="10" fill="rgba(47,111,115,.06)" stroke="rgba(47,111,115,.25)" stroke-width="1"/>
+          <rect x="334" y="10" width="10" height="10" fill="none" stroke="rgba(47,111,115,.2)" stroke-width="1"/>
+          <text x="210" y="148" font-family="'Syne',sans-serif" font-size="7" font-weight="600" fill="rgba(47,111,115,.5)" letter-spacing="2" text-anchor="middle">CANAL DE L'OURCQ</text>
+          <line x1="0" y1="120" x2="420" y2="120" stroke="rgba(28,28,28,.15)" stroke-width="1"/>
+        </svg>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
+<!-- STATS BAND -->
+<section class="stats-band">
+  <div class="stats-inner">
+    <div class="sb-block reveal">
+      <span class="sb-num">20<span style="color:var(--copper);">+</span></span>
+      <div class="sb-lbl">Logements gérés<br>en Île-de-France</div>
+    </div>
+    <div class="sb-block reveal d1">
+      <span class="sb-num">95<span style="font-size:.55em; color:var(--canal);">%</span></span>
+      <div class="sb-lbl">Taux d'occupation<br>moyen atteint</div>
+    </div>
+    <div class="sb-block reveal d2">
+      <span class="sb-num">3<span style="color:var(--copper);">×</span></span>
+      <div class="sb-lbl">Plus de revenus<br>qu'en location classique</div>
+    </div>
+    <div class="sb-block reveal d3">
+      <span class="sb-num">15<span style="font-size:.55em; color:var(--canal);">h</span></span>
+      <div class="sb-lbl">Économisées par semaine<br>pour chaque propriétaire</div>
+    </div>
+  </div>
+</section>
 
-    <!-- ─── Page Hero ───────────────────────── -->
-    <section class="page-hero" aria-labelledby="page-title">
-      <div class="orb orb-teal orb-1"></div>
-      <div class="orb orb-orange orb-2"></div>
-      <div class="container">
-        <div class="page-hero-content">
-          <span class="badge">Notre histoire</span>
-          <h1 id="page-title">
-            Des passionnés d'immobilier <span>au service des propriétaires du 77</span>
-          </h1>
-          <p>
-            15 ans d'expertise, 20+ logements en gestion, une connaissance intime du marché Pantin et Île-de-France. Nous ne gérons pas des biens — nous gérons votre patrimoine.
-          </p>
-        </div>
+<!-- VALEURS -->
+<section class="valeurs">
+  <div class="sec-wrap">
+    <p class="sec-eyebrow reveal">Ce qui nous distingue</p>
+    <h2 class="sec-title reveal d1">Trois valeurs, aucun compromis</h2>
+    <div class="val-grid">
+      <div class="val-card reveal d1">
+        <div class="val-num">01</div>
+        <h3>Ancrage territorial</h3>
+        <p>Pantin n'est pas une ville parmi d'autres. Nous connaissons les quartiers, les saisons créatives, les événements du canal. Cette connaissance granulaire se traduit en pricing dynamique précis et en taux d'occupation élevé.</p>
       </div>
-    </section>
-
-    <!-- ─── Story ───────────────────────────── -->
-    <section class="story-section section" aria-labelledby="story-title">
-      <div class="container">
-        <div class="story-grid">
-          <div class="story-text reveal">
-            <span class="badge">Notre parcours</span>
-            <div class="divider"></div>
-            <h2 id="story-title">De l'investissement personnel à la gestion professionnelle</h2>
-            <p>
-              Tout a commencé par nos propres investissements locatifs en Seine-et-Marne. Face à la complexité de la gestion Airbnb — communication nocturne, ménage, dépannages — nous avons développé nos processus pour automatiser et déléguer.
-            </p>
-            <p>
-              Rapidement, d'autres propriétaires nous ont demandé d'appliquer la même méthode à leurs biens. Aujourd'hui, Hostopia Serris gère plus de 20 logements dans la zone Disneyland Paris — Val d'Europe, avec des résultats qui parlent d'eux-mêmes.
-            </p>
-            <p>
-              Notre avantage : nous sommes investisseurs avant d'être prestataires. Nous pensons rentabilité, pas seulement service.
-            </p>
-          </div>
-
-          <div class="story-visual reveal reveal-delay-1">
-            <div class="story-card-big">
-              <div class="big-number">15</div>
-              <h3>ans d'expertise<br>immobilière</h3>
-              <p>En gestion locative et investissement Airbnb en Seine-et-Marne</p>
-            </div>
-            <div class="story-float-card">
-              <div class="float-number">20+</div>
-              <div class="float-label">logements en gestion dans le 77</div>
-            </div>
-          </div>
-        </div>
+      <div class="val-card reveal d2">
+        <div class="val-num">02</div>
+        <h3>Rigueur industrielle</h3>
+        <p>Processus documentés, checklists exhaustives, réponse guest sous 30 minutes. Notre organisation est héritée de la culture des ateliers : rien ne s'improvise, tout est systématisé pour garantir la qualité à chaque rotation.</p>
       </div>
-    </section>
-
-    <!-- ─── Valeurs ──────────────────────────── -->
-    <section class="values-section section" aria-labelledby="values-title">
-      <div class="container">
-        <header class="section-header">
-          <span class="badge">Ce qui nous guide</span>
-          <div class="divider divider-center"></div>
-          <h2 id="values-title">Nos 3 piliers</h2>
-          <p>Les valeurs qui définissent notre approche et notre relation avec chaque propriétaire.</p>
-        </header>
-
-        <div class="values-grid">
-          <article class="glass-card value-card reveal">
-            <div class="value-icon">📈</div>
-            <h3>Performance d'abord</h3>
-            <p>Chaque décision — tarif, calendrier, description — est guidée par les données. Notre objectif : maximiser votre rentabilité mesurable, pas juste votre occupation.</p>
-          </article>
-
-          <article class="glass-card value-card reveal reveal-delay-1">
-            <div class="value-icon">🤝</div>
-            <h3>Transparence totale</h3>
-            <p>Rapports mensuels détaillés, accès en temps réel à vos statistiques, pas de frais cachés. Vous savez toujours exactement ce que nous faisons et ce que vous gagnez.</p>
-          </article>
-
-          <article class="glass-card value-card reveal reveal-delay-2">
-            <div class="value-icon">🏆</div>
-            <h3>Excellence opérationnelle</h3>
-            <p>Ménage 5 étoiles, linge hôtelier, check-in digital, maintenance préventive. Votre bien mérite le même standard qu'un boutique-hôtel.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── Timeline ─────────────────────────── -->
-    <section class="timeline-section section" aria-labelledby="timeline-title">
-      <div class="container">
-        <header class="section-header">
-          <span class="badge">Notre histoire</span>
-          <div class="divider divider-center"></div>
-          <h2 id="timeline-title">15 ans d'expertise, une évolution constante</h2>
-        </header>
-
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-content">
-              <div class="timeline-year">2010</div>
-              <h4>Les premiers investissements</h4>
-              <p>Premiers achats immobiliers en Seine-et-Marne. Découverte du potentiel locatif près de Disneyland Paris.</p>
-            </div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-empty"></div>
-          </div>
-
-          <div class="timeline-item reveal reveal-delay-1">
-            <div class="timeline-empty"></div>
-            <div class="timeline-dot" style="background: var(--orange);"></div>
-            <div class="timeline-content">
-              <div class="timeline-year" style="color:var(--orange);">2016</div>
-              <h4>Lancement Airbnb</h4>
-              <p>Passage à la location courte durée sur nos propres biens. Résultats : +180% de revenus vs location classique.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal reveal-delay-2">
-            <div class="timeline-content">
-              <div class="timeline-year">2019</div>
-              <h4>Les premiers mandats</h4>
-              <p>Des propriétaires voisins nous confient leurs biens. Construction du modèle Hostopia.</p>
-            </div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-empty"></div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-empty"></div>
-            <div class="timeline-dot" style="background: var(--teal-light);"></div>
-            <div class="timeline-content">
-              <div class="timeline-year" style="color:var(--teal-light);">2025</div>
-              <h4>Hostopia Serris — 20+ biens</h4>
-              <p>Plus de 20 logements en gestion active, taux d'occupation 95% en haute saison, présence sur tout le secteur Val d'Europe.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── Zone d'intervention ──────────────── -->
-    <section class="zone-section section" aria-labelledby="zone-title">
-      <div class="container">
-        <div style="max-width:680px;">
-          <span class="badge">Zone d'intervention</span>
-          <div class="divider"></div>
-          <h2 id="zone-title" style="color:var(--blanc);">
-            Nous couvrons tout<br>
-            <span style="background: linear-gradient(135deg, var(--teal-light), var(--orange-warm)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">le secteur Disneyland</span>
-          </h2>
-          <p style="color:rgba(255,255,255,0.6); font-size:17px; margin-top:20px; max-width:52ch;">
-            De Serris à Val d'Europe, en passant par Chessy et Marne-la-Vallée — notre connaissance de terrain est notre force.
-          </p>
-          <div class="zone-tags reveal">
-            <span class="zone-tag primary">Serris</span>
-            <span class="zone-tag">Chessy</span>
-            <span class="zone-tag">Val d'Europe</span>
-            <span class="zone-tag">Disneyland Paris</span>
-            <span class="zone-tag">Marne-la-Vallée</span>
-            <span class="zone-tag">Coupvray</span>
-            <span class="zone-tag">Bailly-Romainvilliers</span>
-            <span class="zone-tag">Magny-le-Hongre</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── CTA Final ────────────────────────── -->
-    <section class="section" style="background: var(--cream); text-align:center;" aria-label="Appel à l'action">
-      <div class="container">
-        <h2 class="reveal" style="margin-bottom:16px;">Prêt à travailler avec nous&nbsp;?</h2>
-        <p class="reveal reveal-delay-1" style="color:var(--grey-600); font-size:18px; margin:0 auto 40px; max-width:48ch;">
-          Discutons de votre bien et de son potentiel Airbnb à Pantin. Premier échange gratuit, sans engagement.
-        </p>
-        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;" class="reveal reveal-delay-2">
-          <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" class="btn btn-primary" style="padding:16px 36px;" target="_blank" rel="noopener">
-            Prendre rendez-vous
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="https://api.whatsapp.com/send/?phone=33767209266&text=Bonjour+et+bienvenue+chez+HOSTOPIA.%0ANous+aidons+les+propri%C3%A9taires+%C3%A0+augmenter+la+rentabilit%C3%A9+de+leur+logement+en+location+courte+dur%C3%A9e%2C+sans+les+contraintes+de+gestion.%0A%0APour+vous+r%C3%A9pondre+au+mieux%2C+dans+quelle+ville+se+situe+votre+logement+%3F&type=phone_number&app_absent=0" class="btn btn-outline" style="padding:16px 36px;" target="_blank" rel="noopener">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Écrire sur WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ─── Footer ─────────────────────────── -->
-  <footer class="site-footer" aria-label="Pied de page">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="assets/logo-blanc.png" alt="Hostopia" class="footer-logo">
-          <p>Conciergerie Airbnb premium à Pantin et en Seine-et-Marne. Nous gérons votre bien pour maximiser vos revenus locatifs.</p>
-        </div>
-        <nav class="footer-col" aria-label="Liens du site">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
-            <li><a href="/blog">Blog</a></li>
-          </ul>
-        </nav>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener">Prendre RDV</a></li>
-            <li><a href="https://api.whatsapp.com/send/?phone=33767209266&text=Bonjour+et+bienvenue+chez+HOSTOPIA.%0ANous+aidons+les+propri%C3%A9taires+%C3%A0+augmenter+la+rentabilit%C3%A9+de+leur+logement+en+location+courte+dur%C3%A9e%2C+sans+les+contraintes+de+gestion.%0A%0APour+vous+r%C3%A9pondre+au+mieux%2C+dans+quelle+ville+se+situe+votre+logement+%3F&type=phone_number&app_absent=0" target="_blank" rel="noopener">WhatsApp</a></li>
-            <li><a href="mailto:contact@hostopia.fr">Email</a></li>
-            <li><a href="https://hostopia.fr" target="_blank" rel="noopener">hostopia.fr</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Hostopia. Tous droits réservés.</p>
-        <p>Serris · Chessy · Val d'Europe · Marne-la-Vallée</p>
+      <div class="val-card reveal d3">
+        <div class="val-num">03</div>
+        <h3>Transparence totale</h3>
+        <p>Rapport mensuel détaillé, accès en temps réel à vos revenus, aucune commission cachée. Vous savez exactement ce que votre bien génère et comment chaque euro est optimisé.</p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- ─── WhatsApp Floating Button ────────── -->
-  <a href="https://api.whatsapp.com/send/?phone=33767209266&text=Bonjour+et+bienvenue+chez+HOSTOPIA.%0ANous+aidons+les+propri%C3%A9taires+%C3%A0+augmenter+la+rentabilit%C3%A9+de+leur+logement+en+location+courte+dur%C3%A9e%2C+sans+les+contraintes+de+gestion.%0A%0APour+vous+r%C3%A9pondre+au+mieux%2C+dans+quelle+ville+se+situe+votre+logement+%3F&type=phone_number&app_absent=0" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-    <span class="wa-label">Discutons sur WhatsApp</span>
-  </a>
+<!-- ÉQUIPE -->
+<section class="equipe beton">
+  <div class="sec-wrap">
+    <p class="sec-eyebrow reveal">L'équipe</p>
+    <h2 class="sec-title reveal d1">Les visages derrière la gestion</h2>
+    <div class="team-grid">
+      <!-- Card 1 -->
+      <div class="team-card reveal d1">
+        <div class="team-avatar">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;" aria-hidden="true">
+            <rect width="400" height="400" fill="#0F1E1F"/>
+            <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(47,111,115,.1)" stroke-width="1"/>
+            <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(47,111,115,.1)" stroke-width="1"/>
+            <line x1="0" y1="300" x2="400" y2="300" stroke="rgba(47,111,115,.1)" stroke-width="1"/>
+            <line x1="100" y1="0" x2="100" y2="400" stroke="rgba(47,111,115,.1)" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="rgba(47,111,115,.1)" stroke-width="1"/>
+            <line x1="300" y1="0" x2="300" y2="400" stroke="rgba(47,111,115,.1)" stroke-width="1"/>
+            <text x="200" y="240" font-family="'Syne',sans-serif" font-size="110" font-weight="800" fill="rgba(47,111,115,.2)" text-anchor="middle">KL</text>
+            <rect x="0" y="390" width="400" height="10" fill="rgba(47,111,115,.55)"/>
+          </svg>
+        </div>
+        <div class="team-info">
+          <h3>Karim Lakhdar</h3>
+          <div class="team-role">Fondateur &amp; Directeur</div>
+          <p>Entrepreneur dans l'immobilier courte durée depuis 2017. Profonde connaissance du marché Airbnb en Île-de-France, spécialisé sur le 93.</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="team-card reveal d2">
+        <div class="team-avatar">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;" aria-hidden="true">
+            <rect width="400" height="400" fill="#141C1D"/>
+            <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(47,111,115,.08)" stroke-width="1"/>
+            <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(47,111,115,.08)" stroke-width="1"/>
+            <line x1="0" y1="300" x2="400" y2="300" stroke="rgba(47,111,115,.08)" stroke-width="1"/>
+            <line x1="100" y1="0" x2="100" y2="400" stroke="rgba(47,111,115,.08)" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="rgba(47,111,115,.08)" stroke-width="1"/>
+            <line x1="300" y1="0" x2="300" y2="400" stroke="rgba(47,111,115,.08)" stroke-width="1"/>
+            <text x="200" y="240" font-family="'Syne',sans-serif" font-size="110" font-weight="800" fill="rgba(184,107,59,.18)" text-anchor="middle">SR</text>
+            <rect x="0" y="390" width="400" height="10" fill="rgba(184,107,59,.45)"/>
+          </svg>
+        </div>
+        <div class="team-info">
+          <h3>Sarah Reyes</h3>
+          <div class="team-role">Responsable Opérations</div>
+          <p>Coordinatrice terrain, elle pilote les rotations, les prestataires et la qualité hôtelière. Chaque logement reçu comme si c'était le premier séjour.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="team-card reveal d3">
+        <div class="team-avatar">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;" aria-hidden="true">
+            <rect width="400" height="400" fill="#111A1B"/>
+            <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(47,111,115,.07)" stroke-width="1"/>
+            <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(47,111,115,.07)" stroke-width="1"/>
+            <line x1="0" y1="300" x2="400" y2="300" stroke="rgba(47,111,115,.07)" stroke-width="1"/>
+            <line x1="100" y1="0" x2="100" y2="400" stroke="rgba(47,111,115,.07)" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="rgba(47,111,115,.07)" stroke-width="1"/>
+            <line x1="300" y1="0" x2="300" y2="400" stroke="rgba(47,111,115,.07)" stroke-width="1"/>
+            <text x="200" y="240" font-family="'Syne',sans-serif" font-size="110" font-weight="800" fill="rgba(217,68,143,.15)" text-anchor="middle">MB</text>
+            <rect x="0" y="390" width="400" height="10" fill="rgba(217,68,143,.38)"/>
+          </svg>
+        </div>
+        <div class="team-info">
+          <h3>Mehdi Bouarfa</h3>
+          <div class="team-role">Revenue Manager</div>
+          <p>Expert pricing dynamique. Il ajuste vos tarifs quotidiennement selon les événements, la concurrence et la demande pour maximiser chaque nuit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script>
-    // Header scroll — this page starts scrolled
-    const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-      if (window.scrollY <= 40) header.classList.add('scrolled');
-    }, { passive: true });
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-wrap">
+    <div class="cta-text reveal">
+      <h2>Prêt à travailler avec<br>une équipe <em>locale</em> ?</h2>
+      <p>Prenez rendez-vous pour un appel découverte de 20 minutes. Nous analysons votre bien, estimons vos revenus potentiels et vous expliquons exactement comment nous travaillons.</p>
+    </div>
+    <div class="cta-actions reveal d2">
+      <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" target="_blank" rel="noopener" class="btn-canal-lg">Estimer mes revenus →</a>
+      <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="btn-outline-light">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
 
-    // Scroll reveal
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      }),
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-    );
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Conciergerie <em>Pantin</em></div>
+    <div class="footer-links">
+      <a href="/">Accueil</a>
+      <a href="/qui-sommes-nous">Qui sommes-nous</a>
+      <a href="/blog">Blog</a>
+    </div>
+    <div class="footer-copy">© 2025 Hostopia · Conciergerie Airbnb Pantin</div>
+  </div>
+</footer>
 
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/33767209266" target="_blank" rel="noopener" class="wa-float" aria-label="Nous contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-label">WhatsApp</span>
+</a>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold:0.12 });
+  reveals.forEach(r => io.observe(r));
+</script>
 </body>
 </html>
