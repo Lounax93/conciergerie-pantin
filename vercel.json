@@ -10,5 +10,9 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
+  ],
+  "redirects": [
+    { "source": "/revenus-airbnb-pantin-2026", "destination": "/blog/revenus-airbnb-pantin-2026", "permanent": true },
+    { "source": "/reglementation-airbnb-pantin-93", "destination": "/blog/reglementation-airbnb-pantin-93", "permanent": true }
   ]
 }

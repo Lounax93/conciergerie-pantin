@@ -104,33 +104,26 @@
     .sec-eyebrow::before { content:''; width:24px; height:1px; background:var(--canal); }
     .sec-title { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(1.9rem,3vw,2.8rem); color:var(--charcoal); line-height:1.12; margin-bottom:48px; }
 
-    /* ── COMING SOON HERO CARD ── */
-    .coming-section { background:var(--concrete); padding:96px 0 80px; }
-    .coming-card {
-      background:#fff; border:1px solid var(--border);
-      border-left:3px solid var(--canal);
-      padding:56px 56px 56px;
-      display:grid; grid-template-columns:1fr auto; gap:48px; align-items:center;
-      position:relative; overflow:hidden;
+    /* ── ARTICLES GRID ── */
+    .articles-section { background:var(--concrete); padding:96px 0 80px; }
+    .articles-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+    .article-card {
+      background:#fff; border:1px solid var(--border); border-top:3px solid transparent;
+      display:flex; flex-direction:column; overflow:hidden;
+      transition:box-shadow .3s, transform .25s, border-top-color .25s;
     }
-    .coming-card::before {
-      content:'BIENTÔT';
-      position:absolute; right:-16px; top:50%; transform:translateY(-50%);
-      font-family:'Syne',sans-serif; font-size:clamp(60px,10vw,120px); font-weight:800;
-      color:rgba(28,28,28,.03); letter-spacing:-.04em; pointer-events:none; user-select:none;
-    }
-    .coming-badge { display:inline-flex; align-items:center; gap:10px; font-size:.64rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--canal); margin-bottom:18px; }
-    .coming-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--canal); animation:pulse 2.2s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.7);} }
-    .coming-card h2 { font-family:'Syne',sans-serif; font-size:clamp(1.8rem,3.2vw,3rem); font-weight:800; color:var(--charcoal); line-height:1.1; margin-bottom:16px; }
-    .coming-card h2 em { color:var(--canal); font-style:normal; }
-    .coming-card p { font-size:.94rem; color:var(--muted); line-height:1.82; font-weight:300; max-width:520px; }
-    .coming-aside { text-align:right; flex-shrink:0; }
-    .coming-progress { width:120px; margin-left:auto; margin-bottom:16px; }
-    .progress-track { height:3px; background:var(--border); border-radius:2px; overflow:hidden; }
-    .progress-fill { height:100%; width:35%; background:var(--canal); border-radius:2px; }
-    .coming-aside-label { font-size:.64rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
-    .coming-aside-pct { font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:var(--canal); line-height:1; margin-bottom:6px; }
+    .article-card:hover { box-shadow:0 14px 44px rgba(28,28,28,.09); transform:translateY(-3px); border-top-color:var(--canal); }
+    .card-thumb { height:180px; display:flex; align-items:flex-end; padding:20px; position:relative; }
+    .card-thumb-label { font-size:.6rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--canal-light); background:rgba(20,20,20,.75); padding:4px 10px; border-radius:2px; font-family:'Syne',sans-serif; }
+    .card-body { padding:24px; flex:1; display:flex; flex-direction:column; }
+    .card-meta { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+    .card-tag { font-size:.6rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--copper); }
+    .card-date { font-size:.6rem; font-weight:500; color:var(--muted); }
+    .card-title { font-family:'Syne',sans-serif; font-size:1.05rem; font-weight:800; color:var(--charcoal); line-height:1.25; margin-bottom:10px; }
+    .card-desc { font-size:.82rem; color:var(--muted); line-height:1.7; font-weight:300; margin-bottom:20px; flex:1; }
+    .card-link { display:inline-flex; align-items:center; gap:8px; font-size:.72rem; font-weight:600; color:var(--canal); font-family:'Syne',sans-serif; transition:gap .2s; }
+    .card-link:hover { gap:12px; }
+    .card-link svg { width:14px; height:14px; }
 
     /* ── TOPICS GRID ── */
     .topics-section { background:var(--stone); padding:80px 0; }
@@ -278,25 +271,43 @@
   <div class="hero-canal-strip"></div>
 </section>
 
-<!-- COMING SOON CARD -->
-<section class="coming-section beton" style="padding-top:120px;">
+<!-- ARTICLES -->
+<section class="articles-section beton" style="padding-top:120px;">
   <div class="sec-wrap">
-    <div class="coming-card reveal">
-      <div>
-        <div class="coming-badge">
-          <div class="coming-badge-dot"></div>
-          En cours de rédaction
+    <p class="sec-eyebrow reveal">Dernières publications</p>
+    <h2 class="sec-title reveal d1">Guides pour propriétaires à Pantin</h2>
+    <div class="articles-grid">
+
+      <a href="/blog/revenus-airbnb-pantin-2026" class="article-card reveal">
+        <div class="card-thumb" style="background:linear-gradient(135deg,#141414 0%,#1D4F52 50%,#141414 100%);">
+          <span class="card-thumb-label">Revenus · Pantin</span>
         </div>
-        <h2>Le guide complet<br>du propriétaire <em>Pantin</em></h2>
-        <p>Revenus réels, saisonnalité, réglementation 93, quartiers porteurs — un guide exhaustif par l'équipe qui gère des biens ici depuis 2019. Inscrivez-vous pour être prévenu à la publication.</p>
-      </div>
-      <div class="coming-aside">
-        <div class="coming-aside-pct">35%</div>
-        <div class="coming-aside-label">En cours</div>
-        <div class="coming-progress">
-          <div class="progress-track"><div class="progress-fill"></div></div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">Revenus · Pantin</span>
+            <span class="card-date">Juin 2026</span>
+          </div>
+          <div class="card-title">Combien rapporte un Airbnb à Pantin en 2026 ?</div>
+          <p class="card-desc">Revenus réels par type de bien, taux d'occupation, comparatif avec la location classique. Tous les chiffres du marché Pantin.</p>
+          <span class="card-link">Lire l'article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </div>
-      </div>
+      </a>
+
+      <a href="/blog/reglementation-airbnb-pantin-93" class="article-card reveal d1">
+        <div class="card-thumb" style="background:linear-gradient(135deg,#1a0a00 0%,#3d1f0a 50%,#1a0a00 100%);">
+          <span class="card-thumb-label">Réglementation · 93</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">Réglementation · Pantin</span>
+            <span class="card-date">Juin 2026</span>
+          </div>
+          <div class="card-title">Réglementation Airbnb Pantin 93 : le guide complet 2026</div>
+          <p class="card-desc">Numéro d'enregistrement, 120 jours, copropriété, fiscalité LMNP, taxe de séjour — tout ce qu'il faut savoir pour louer légalement.</p>
+          <span class="card-link">Lire l'article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
