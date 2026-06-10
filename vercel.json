@@ -19,6 +19,8 @@
     { "source": "/decorer-meubler-airbnb-pantin", "destination": "/blog/decorer-meubler-airbnb-pantin", "permanent": true },
     { "source": "/checkin-autonome-airbnb-pantin", "destination": "/blog/checkin-autonome-airbnb-pantin", "permanent": true },
     { "source": "/profil-voyageur-airbnb-pantin", "destination": "/blog/profil-voyageur-airbnb-pantin", "permanent": true },
-    { "source": "/photographie-home-staging-airbnb-pantin", "destination": "/blog/photographie-home-staging-airbnb-pantin", "permanent": true }
+    { "source": "/photographie-home-staging-airbnb-pantin", "destination": "/blog/photographie-home-staging-airbnb-pantin", "permanent": true },
+    { "source": "/lmnp-fiscalite-airbnb-pantin-2026", "destination": "/blog/lmnp-fiscalite-airbnb-pantin-2026", "permanent": true },
+    { "source": "/taxe-sejour-declaration-airbnb-pantin", "destination": "/blog/taxe-sejour-declaration-airbnb-pantin", "permanent": true }
   ]
 }
