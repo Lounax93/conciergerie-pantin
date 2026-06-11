@@ -21,6 +21,8 @@
     { "source": "/profil-voyageur-airbnb-pantin", "destination": "/blog/profil-voyageur-airbnb-pantin", "permanent": true },
     { "source": "/photographie-home-staging-airbnb-pantin", "destination": "/blog/photographie-home-staging-airbnb-pantin", "permanent": true },
     { "source": "/lmnp-fiscalite-airbnb-pantin-2026", "destination": "/blog/lmnp-fiscalite-airbnb-pantin-2026", "permanent": true },
-    { "source": "/taxe-sejour-declaration-airbnb-pantin", "destination": "/blog/taxe-sejour-declaration-airbnb-pantin", "permanent": true }
+    { "source": "/taxe-sejour-declaration-airbnb-pantin", "destination": "/blog/taxe-sejour-declaration-airbnb-pantin", "permanent": true },
+    { "source": "/evenements-airbnb-pantin-2026", "destination": "/blog/evenements-airbnb-pantin-2026", "permanent": true },
+    { "source": "/cout-gestion-conciergerie-airbnb-pantin", "destination": "/blog/cout-gestion-conciergerie-airbnb-pantin", "permanent": true }
   ]
 }
