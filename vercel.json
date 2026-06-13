@@ -25,6 +25,8 @@
     { "source": "/evenements-airbnb-pantin-2026", "destination": "/blog/evenements-airbnb-pantin-2026", "permanent": true },
     { "source": "/cout-gestion-conciergerie-airbnb-pantin", "destination": "/blog/cout-gestion-conciergerie-airbnb-pantin", "permanent": true },
     { "source": "/avis-clients-reputation-airbnb-pantin", "destination": "/blog/avis-clients-reputation-airbnb-pantin", "permanent": true },
-    { "source": "/quartiers-airbnb-pantin-2026", "destination": "/blog/quartiers-airbnb-pantin-2026", "permanent": true }
+    { "source": "/quartiers-airbnb-pantin-2026", "destination": "/blog/quartiers-airbnb-pantin-2026", "permanent": true },
+    { "source": "/assurance-airbnb-pantin-93", "destination": "/blog/assurance-airbnb-pantin-93", "permanent": true },
+    { "source": "/acheter-bien-immobilier-airbnb-pantin", "destination": "/blog/acheter-bien-immobilier-airbnb-pantin", "permanent": true }
   ]
 }
