@@ -58,6 +58,28 @@
     .nav-cta:hover { background:var(--canal-dark)!important; }
     .nav-mobile-cta { display:none; background:var(--canal); color:#fff; text-decoration:none; padding:8px 16px; border-radius:4px; font-family:'Syne',sans-serif; font-size:.78rem; font-weight:700; white-space:nowrap; }
 
+    /* ── MOBILE HAMBURGER ── */
+    .nav-hamburger { display:none; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer; padding:4px; line-height:1; z-index:210; }
+    .nav-hamburger.active { position:fixed; right:20px; top:15px; }
+    .mobile-overlay {
+      display:none; position:fixed; inset:0; z-index:205;
+      background:var(--charcoal-d);
+      flex-direction:column; align-items:center; justify-content:center; gap:32px;
+    }
+    .mobile-overlay.open { display:flex; }
+    .mobile-overlay a {
+      color:rgba(255,255,255,.6); text-decoration:none;
+      font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:700;
+      letter-spacing:-.02em; transition:color .2s;
+    }
+    .mobile-overlay a:hover { color:#fff; }
+    .mobile-overlay .mobile-cta {
+      background:var(--canal); color:#fff!important; padding:14px 36px;
+      border-radius:4px; font-size:1rem;
+      transition:background .2s;
+    }
+    .mobile-overlay .mobile-cta:hover { background:var(--canal-dark); }
+
     /* ── WHATSAPP ── */
     .wa-float { position:fixed; bottom:28px; right:28px; z-index:999; background:#25D366; color:#fff; width:54px; height:54px; border-radius:27px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,.35); transition:transform .25s, width .3s, padding .3s; overflow:hidden; white-space:nowrap; }
     .wa-float svg { width:24px; height:24px; flex-shrink:0; }
@@ -196,6 +218,7 @@
       nav { padding:0 20px; height:56px; }
       .nav-links { display:none; }
       .nav-mobile-cta { display:flex !important; }
+      .nav-hamburger { display:inline-flex !important; }
 
       /* PAGE HERO */
       .page-hero { padding:100px 20px 80px; clip-path:none; margin-bottom:0; }
@@ -258,7 +281,16 @@
     <li><a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="nav-cta">Prendre rendez-vous</a></li>
   </ul>
   <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" class="nav-mobile-cta" target="_blank" rel="noopener">Estimer →</a>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
 </nav>
+
+<!-- MOBILE OVERLAY -->
+<div class="mobile-overlay" role="dialog" aria-modal="true" aria-label="Menu navigation">
+  <a href="/" onclick="closeMenu()">Accueil</a>
+  <a href="/qui-sommes-nous" onclick="closeMenu()">Qui sommes-nous</a>
+  <a href="/blog" onclick="closeMenu()">Blog</a>
+  <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" class="mobile-cta" target="_blank" rel="noopener" onclick="closeMenu()">Prendre RDV</a>
+</div>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
@@ -648,11 +680,31 @@
 </a>
 
 <script>
+  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold:0.12 });
   reveals.forEach(r => io.observe(r));
+
+  // Mobile hamburger menu
+  const hamburger = document.querySelector('.nav-hamburger');
+  const overlay = document.querySelector('.mobile-overlay');
+  function toggleMenu() {
+    const open = overlay.classList.toggle('open');
+    hamburger.classList.toggle('active');
+    hamburger.textContent = open ? '✕' : '☰';
+    hamburger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  function closeMenu() {
+    overlay.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.textContent = '☰';
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  if (hamburger) hamburger.addEventListener('click', toggleMenu);
 </script>
 </body>
 </html>
