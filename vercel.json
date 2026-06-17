@@ -31,6 +31,8 @@
     { "source": "/tarification-dynamique-pricing-airbnb-pantin", "destination": "/blog/tarification-dynamique-pricing-airbnb-pantin", "permanent": true },
     { "source": "/menage-linge-professionnel-airbnb-pantin", "destination": "/blog/menage-linge-professionnel-airbnb-pantin", "permanent": true },
     { "source": "/renover-appartement-airbnb-pantin", "destination": "/blog/renover-appartement-airbnb-pantin", "permanent": true },
-    { "source": "/accueil-voyageurs-guest-experience-airbnb-pantin", "destination": "/blog/accueil-voyageurs-guest-experience-airbnb-pantin", "permanent": true }
+    { "source": "/accueil-voyageurs-guest-experience-airbnb-pantin", "destination": "/blog/accueil-voyageurs-guest-experience-airbnb-pantin", "permanent": true },
+    { "source": "/gestion-litiges-airbnb-pantin", "destination": "/blog/gestion-litiges-airbnb-pantin", "permanent": true },
+    { "source": "/multi-logements-airbnb-pantin-investir", "destination": "/blog/multi-logements-airbnb-pantin-investir", "permanent": true }
   ]
 }
