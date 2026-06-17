@@ -33,6 +33,8 @@
     { "source": "/renover-appartement-airbnb-pantin", "destination": "/blog/renover-appartement-airbnb-pantin", "permanent": true },
     { "source": "/accueil-voyageurs-guest-experience-airbnb-pantin", "destination": "/blog/accueil-voyageurs-guest-experience-airbnb-pantin", "permanent": true },
     { "source": "/gestion-litiges-airbnb-pantin", "destination": "/blog/gestion-litiges-airbnb-pantin", "permanent": true },
-    { "source": "/multi-logements-airbnb-pantin-investir", "destination": "/blog/multi-logements-airbnb-pantin-investir", "permanent": true }
+    { "source": "/multi-logements-airbnb-pantin-investir", "destination": "/blog/multi-logements-airbnb-pantin-investir", "permanent": true },
+    { "source": "/dpe-performance-energetique-airbnb-pantin-2026", "destination": "/blog/dpe-performance-energetique-airbnb-pantin-2026", "permanent": true },
+    { "source": "/concurrence-airbnb-pantin-se-demarquer-2026", "destination": "/blog/concurrence-airbnb-pantin-se-demarquer-2026", "permanent": true }
   ]
 }
