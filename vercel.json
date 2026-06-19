@@ -37,6 +37,8 @@
     { "source": "/dpe-performance-energetique-airbnb-pantin-2026", "destination": "/blog/dpe-performance-energetique-airbnb-pantin-2026", "permanent": true },
     { "source": "/concurrence-airbnb-pantin-se-demarquer-2026", "destination": "/blog/concurrence-airbnb-pantin-se-demarquer-2026", "permanent": true },
     { "source": "/sous-location-airbnb-pantin-regles-2026", "destination": "/blog/sous-location-airbnb-pantin-regles-2026", "permanent": true },
-    { "source": "/airbnb-pantin-noel-fetes-2026", "destination": "/blog/airbnb-pantin-noel-fetes-2026", "permanent": true }
+    { "source": "/airbnb-pantin-noel-fetes-2026", "destination": "/blog/airbnb-pantin-noel-fetes-2026", "permanent": true },
+    { "source": "/wifi-internet-airbnb-pantin", "destination": "/blog/wifi-internet-airbnb-pantin", "permanent": true },
+    { "source": "/animaux-acceptes-airbnb-pantin", "destination": "/blog/animaux-acceptes-airbnb-pantin", "permanent": true }
   ]
 }
