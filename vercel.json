@@ -39,6 +39,8 @@
     { "source": "/sous-location-airbnb-pantin-regles-2026", "destination": "/blog/sous-location-airbnb-pantin-regles-2026", "permanent": true },
     { "source": "/airbnb-pantin-noel-fetes-2026", "destination": "/blog/airbnb-pantin-noel-fetes-2026", "permanent": true },
     { "source": "/wifi-internet-airbnb-pantin", "destination": "/blog/wifi-internet-airbnb-pantin", "permanent": true },
-    { "source": "/animaux-acceptes-airbnb-pantin", "destination": "/blog/animaux-acceptes-airbnb-pantin", "permanent": true }
+    { "source": "/animaux-acceptes-airbnb-pantin", "destination": "/blog/animaux-acceptes-airbnb-pantin", "permanent": true },
+    { "source": "/securite-prevention-risques-airbnb-pantin", "destination": "/blog/securite-prevention-risques-airbnb-pantin", "permanent": true },
+    { "source": "/smart-home-domotique-airbnb-pantin", "destination": "/blog/smart-home-domotique-airbnb-pantin", "permanent": true }
   ]
 }
