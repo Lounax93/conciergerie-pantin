@@ -1,0 +1,106 @@
+{
+  "name": "Conciergerie Pantin Blog Design",
+  "version": "1.0",
+  "description": "Design system for blog.conciergeriepantin.fr — inspired by Canal de l'Ourcq industrial heritage and modern Airbnb aesthetic.",
+  "colors": {
+    "concrete": "#F3F0EA",
+    "stone": "#E6E0D6",
+    "charcoal": "#1C1C1C",
+    "charcoal_dark": "#141414",
+    "canal": "#2F6F73",
+    "canal_dark": "#1D4F52",
+    "canal_light": "#4A9EA3",
+    "copper": "#B86B3B",
+    "copper_dark": "#8A4F28",
+    "creative": "#D9448F"
+  },
+  "typography": {
+    "headings": {
+      "family": "Syne",
+      "weights": [400, 600, 700, 800],
+      "letter_spacing": "-0.03em"
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [300, 400, 500],
+      "size": "0.94rem",
+      "line_height": "1.9",
+      "color": "rgba(28,28,28,.72)"
+    }
+  },
+  "layout": {
+    "article_body_max_width": "720px",
+    "article_body_padding": "80px 24px 60px",
+    "nav_height": "60px",
+    "nav_padding": "0 56px"
+  },
+  "components": {
+    "article_hero": {
+      "padding": "140px 80px 100px",
+      "background": "#141414",
+      "clip_path": "polygon(0 0,100% 0,100% 88%,0 100%)",
+      "h1_size": "clamp(2rem,4vw,3.2rem)",
+      "h1_color": "#fff",
+      "accent_color": "#2F6F73",
+      "canal_strip": "3px solid #2F6F73 at bottom"
+    },
+    "article_body": {
+      "h2": "1.6rem, 800 weight, border-bottom 1px solid border",
+      "h3": "1.15rem, 700 weight",
+      "strong": "charcoal, 500 weight",
+      "a": "canal underline, hover canal-dark"
+    },
+    "highlight_box": {
+      "background": "linear-gradient(135deg, #2F6F73 0%, #1D4F52 100%)",
+      "color": "#fff",
+      "padding": "28px 32px",
+      "border_radius": "4px"
+    },
+    "toc_card": {
+      "background": "#fff",
+      "border": "1px solid rgba(28,28,28,0.08)",
+      "border_radius": "4px",
+      "padding": "28px 32px"
+    },
+    "blockquote": {
+      "background": "#E6E0D6",
+      "border_left": "3px solid #2F6F73",
+      "padding": "20px 24px",
+      "font_style": "italic"
+    },
+    "cta_final": {
+      "background": "#F3F0EA",
+      "heading_font": "Syne, 800, clamp(1.6rem,3vw,2.4rem)",
+      "button_primary": "#2F6F73, hover #1D4F52",
+      "button_outline": "1px solid rgba(28,28,28,0.14), hover canal"
+    },
+    "article_nav": {
+      "display": "flex, space-between",
+      "card": "#fff, border 1px solid border, border-radius 4px",
+      "hover": "translateY(-2px), box-shadow 0 8px 24px rgba(28,28,28,.07)"
+    },
+    "footer": {
+      "background": "#141414",
+      "padding": "48px 80px",
+      "links": "uppercase, 0.72rem, rgba(255,255,255,.28)"
+    },
+    "whatsapp_float": {
+      "position": "fixed, bottom 28px, right 28px",
+      "background": "#25D366",
+      "width": "54px", "height": "54px",
+      "border_radius": "27px",
+      "hover_expand": true
+    }
+  },
+  "responsive": {
+    "breakpoint_960": {
+      "nav": "padding 0 20px, height 56px",
+      "hero": "clip-path none, padding 100px 20px 80px",
+      "body": "padding 60px 20px 40px"
+    },
+    "breakpoint_480": {
+      "hero": "padding 90px 16px 72px",
+      "body": "padding 40px 16px 30px"
+    }
+  }
+}
