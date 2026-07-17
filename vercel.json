@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/:slug((?!blog|assets|styles|qui-sommes-nous|robots\\.txt|sitemap\\.xml|favicon\\.ico|vercel\\.json).*)", "destination": "/blog/:slug", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -10,37 +13,5 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
-  ],
-  "redirects": [
-    { "source": "/revenus-airbnb-pantin-2026", "destination": "/blog/revenus-airbnb-pantin-2026", "permanent": true },
-    { "source": "/reglementation-airbnb-pantin-93", "destination": "/blog/reglementation-airbnb-pantin-93", "permanent": true },
-    { "source": "/saisonnalite-airbnb-pantin-ete-2026", "destination": "/blog/saisonnalite-airbnb-pantin-ete-2026", "permanent": true },
-    { "source": "/investir-airbnb-bobigny-romainville-2026", "destination": "/blog/investir-airbnb-bobigny-romainville-2026", "permanent": true },
-    { "source": "/decorer-meubler-airbnb-pantin", "destination": "/blog/decorer-meubler-airbnb-pantin", "permanent": true },
-    { "source": "/checkin-autonome-airbnb-pantin", "destination": "/blog/checkin-autonome-airbnb-pantin", "permanent": true },
-    { "source": "/profil-voyageur-airbnb-pantin", "destination": "/blog/profil-voyageur-airbnb-pantin", "permanent": true },
-    { "source": "/photographie-home-staging-airbnb-pantin", "destination": "/blog/photographie-home-staging-airbnb-pantin", "permanent": true },
-    { "source": "/lmnp-fiscalite-airbnb-pantin-2026", "destination": "/blog/lmnp-fiscalite-airbnb-pantin-2026", "permanent": true },
-    { "source": "/taxe-sejour-declaration-airbnb-pantin", "destination": "/blog/taxe-sejour-declaration-airbnb-pantin", "permanent": true },
-    { "source": "/evenements-airbnb-pantin-2026", "destination": "/blog/evenements-airbnb-pantin-2026", "permanent": true },
-    { "source": "/cout-gestion-conciergerie-airbnb-pantin", "destination": "/blog/cout-gestion-conciergerie-airbnb-pantin", "permanent": true },
-    { "source": "/avis-clients-reputation-airbnb-pantin", "destination": "/blog/avis-clients-reputation-airbnb-pantin", "permanent": true },
-    { "source": "/quartiers-airbnb-pantin-2026", "destination": "/blog/quartiers-airbnb-pantin-2026", "permanent": true },
-    { "source": "/assurance-airbnb-pantin-93", "destination": "/blog/assurance-airbnb-pantin-93", "permanent": true },
-    { "source": "/acheter-bien-immobilier-airbnb-pantin", "destination": "/blog/acheter-bien-immobilier-airbnb-pantin", "permanent": true },
-    { "source": "/tarification-dynamique-pricing-airbnb-pantin", "destination": "/blog/tarification-dynamique-pricing-airbnb-pantin", "permanent": true },
-    { "source": "/menage-linge-professionnel-airbnb-pantin", "destination": "/blog/menage-linge-professionnel-airbnb-pantin", "permanent": true },
-    { "source": "/renover-appartement-airbnb-pantin", "destination": "/blog/renover-appartement-airbnb-pantin", "permanent": true },
-    { "source": "/accueil-voyageurs-guest-experience-airbnb-pantin", "destination": "/blog/accueil-voyageurs-guest-experience-airbnb-pantin", "permanent": true },
-    { "source": "/gestion-litiges-airbnb-pantin", "destination": "/blog/gestion-litiges-airbnb-pantin", "permanent": true },
-    { "source": "/multi-logements-airbnb-pantin-investir", "destination": "/blog/multi-logements-airbnb-pantin-investir", "permanent": true },
-    { "source": "/dpe-performance-energetique-airbnb-pantin-2026", "destination": "/blog/dpe-performance-energetique-airbnb-pantin-2026", "permanent": true },
-    { "source": "/concurrence-airbnb-pantin-se-demarquer-2026", "destination": "/blog/concurrence-airbnb-pantin-se-demarquer-2026", "permanent": true },
-    { "source": "/sous-location-airbnb-pantin-regles-2026", "destination": "/blog/sous-location-airbnb-pantin-regles-2026", "permanent": true },
-    { "source": "/airbnb-pantin-noel-fetes-2026", "destination": "/blog/airbnb-pantin-noel-fetes-2026", "permanent": true },
-    { "source": "/wifi-internet-airbnb-pantin", "destination": "/blog/wifi-internet-airbnb-pantin", "permanent": true },
-    { "source": "/animaux-acceptes-airbnb-pantin", "destination": "/blog/animaux-acceptes-airbnb-pantin", "permanent": true },
-    { "source": "/securite-prevention-risques-airbnb-pantin", "destination": "/blog/securite-prevention-risques-airbnb-pantin", "permanent": true },
-    { "source": "/smart-home-domotique-airbnb-pantin", "destination": "/blog/smart-home-domotique-airbnb-pantin", "permanent": true }
   ]
 }
