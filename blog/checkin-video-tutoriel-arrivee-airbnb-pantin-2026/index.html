@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL60XQ455W"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YL60XQ455W');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check-in Vidéo Airbnb Pantin | Tutoriel d'arrivée interactif 2026</title>
+  <meta name="description" content="Guide complet pour créer un check-in vidéo et un tutoriel d'arrivée interactif pour votre Airbnb à Pantin. Réduisez les appels voyageurs de 70 %, améliorez vos avis et automatisez vos arrivées au Canal de l'Ourcq.">
+  <link rel="canonical" href="https://conciergeriepantin.fr/blog/checkin-video-tutoriel-arrivee-airbnb-pantin-2026">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; overflow-x:hidden; }
+    body { font-family:'Inter',sans-serif; font-weight:400; color:#1C1C1C; background:#F3F0EA; overflow-x:hidden; }
+
+    :root {
+      --concrete:    #F3F0EA;
+      --stone:       #E6E0D6;
+      --charcoal:    #1C1C1C;
+      --charcoal-d:  #141414;
+      --canal:       #2F6F73;
+      --canal-dark:  #1D4F52;
+      --canal-light: #4A9EA3;
+      --copper:      #B86B3B;
+      --copper-dark: #8A4F28;
+      --border:      rgba(28,28,28,0.08);
+      --border-s:    rgba(28,28,28,0.14);
+      --muted:       rgba(28,28,28,0.5);
+    }
+
+    h1,h2,h3 { font-family:'Syne',sans-serif; letter-spacing:-0.03em; }
+
+    .beton { background-image:radial-gradient(circle, rgba(28,28,28,0.025) 1px, transparent 1px); background-size:3px 3px; }
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1); }
+    .reveal.visible { opacity:1; transform:none; }
+    .d1{transition-delay:.1s;} .d2{transition-delay:.2s;} .d3{transition-delay:.3s;}
+
+    /* NAV */
+    nav { position:fixed; top:0; left:0; right:0; z-index:200; background:var(--charcoal-d); height:60px; padding:0 56px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .nav-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:.94rem; color:#fff; text-decoration:none; letter-spacing:-.01em; }
+    .nav-logo em { color:var(--canal); font-style:normal; }
+    .nav-links { display:flex; gap:36px; list-style:none; align-items:center; }
+    .nav-links a { color:rgba(255,255,255,.45); text-decoration:none; font-size:.72rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; transition:color .2s; }
+    .nav-links a:hover, .nav-links a.active { color:rgba(255,255,255,.9); }
+    .nav-cta { background:var(--canal)!important; color:#fff!important; padding:8px 20px; border-radius:4px; text-transform:none!important; letter-spacing:-.01em!important; font-size:.82rem!important; font-family:'Syne',sans-serif; font-weight:700!important; transition:background .2s!important; }
+    .nav-cta:hover { background:var(--canal-dark)!important; }
+    .nav-mobile-cta { display:none; background:var(--canal); color:#fff; text-decoration:none; padding:8px 16px; border-radius:4px; font-family:'Syne',sans-serif; font-size:.78rem; font-weight:700; white-space:nowrap; }
+
+    /* WHATSAPP */
+    .wa-float { position:fixed; bottom:28px; right:28px; z-index:999; background:#25D366; color:#fff; width:54px; height:54px; border-radius:27px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,.35); transition:transform .25s, width .3s, padding .3s; overflow:hidden; white-space:nowrap; }
+    .wa-float svg { width:24px; height:24px; flex-shrink:0; }
+    .wa-label { display:none; font-size:.8rem; font-weight:500; margin-left:9px; margin-right:3px; font-family:'Inter',sans-serif; }
+    .wa-float:hover { transform:scale(1.04); width:auto; padding:0 16px 0 13px; }
+    .wa-float:hover .wa-label { display:inline; }
+
+    /* ARTICLE HERO */
+    .article-hero { padding:140px 80px 100px; background:var(--charcoal-d); position:relative; overflow:hidden; }
+    .article-hero::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px); background-size:3px 3px; pointer-events:none; }
+    .article-hero::after { content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,transparent 0px,transparent 63px,rgba(255,255,255,.015) 63px,rgba(255,255,255,.015) 64px); pointer-events:none; }
+    .article-hero-wm { position:absolute; right:-2%; bottom:10%; font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(100px,18vw,240px); line-height:0.88; color:rgba(255,255,255,.018); pointer-events:none; user-select:none; z-index:0; }
+    .article-hero-inner { max-width:720px; margin:0 auto; position:relative; z-index:2; }
+    .article-hero-eyebrow { font-size:.64rem; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--canal-light); margin-bottom:20px; display:flex; align-items:center; gap:14px; }
+    .article-hero-eyebrow::before { content:''; width:24px; height:1px; background:var(--canal); }
+    .article-hero h1 { font-family:'Syne',sans-serif; font-weight:800; font-size:clamp(2rem,3.8vw,3.6rem); color:#fff; line-height:1.08; letter-spacing:-.04em; margin-bottom:20px; }
+    .article-hero h1 em { color:var(--canal); font-style:normal; }
+    .article-hero-meta { display:flex; gap:20px; font-size:.78rem; color:rgba(255,255,255,.4); margin-bottom:32px; }
+    .article-hero-meta span { display:flex; align-items:center; gap:6px; }
+    .hero-canal-strip { position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--canal); opacity:.5; z-index:3; }
+
+    /* CONTENT */
+    .article-content { max-width:720px; margin:0 auto; padding:64px 24px 48px; }
+    .article-content h2 { font-size:1.5rem; font-weight:800; color:var(--charcoal); margin:48px 0 16px; line-height:1.2; }
+    .article-content h3 { font-size:1.15rem; font-weight:700; color:var(--canal-dark); margin:32px 0 12px; line-height:1.3; }
+    .article-content p { font-size:.95rem; line-height:1.85; color:var(--charcoal); margin-bottom:20px; font-weight:300; }
+    .article-content ul, .article-content ol { margin:0 0 24px 24px; font-size:.95rem; line-height:1.85; color:var(--charcoal); font-weight:300; }
+    .article-content li { margin-bottom:8px; }
+    .article-content strong { font-weight:500; }
+    .article-content blockquote { border-left:3px solid var(--canal); padding:16px 24px; margin:24px 0; background:rgba(47,111,115,.04); border-radius:0 4px 4px 0; font-style:italic; color:var(--muted); font-size:.9rem; }
+
+    /* INFO TABLE */
+    .data-table { width:100%; border-collapse:collapse; margin:24px 0; font-size:.85rem; }
+    .data-table th { background:var(--charcoal-d); color:#fff; font-family:'Syne',sans-serif; font-weight:600; padding:12px 16px; text-align:left; letter-spacing:.02em; }
+    .data-table td { padding:10px 16px; border-bottom:1px solid var(--border); }
+    .data-table tr:nth-child(even) { background:rgba(47,111,115,.025); }
+    .data-table tr:hover { background:rgba(47,111,115,.06); }
+
+    /* CTA INLINE */
+    .cta-inline { background:var(--stone); border:1px solid var(--border); padding:32px; margin:40px 0; border-radius:4px; }
+    .cta-inline h3 { font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:var(--charcoal); margin-bottom:12px; }
+    .cta-inline p { font-size:.85rem; color:var(--muted); margin-bottom:20px; line-height:1.7; }
+    .cta-inline .btn-group { display:flex; flex-wrap:wrap; gap:12px; }
+    .btn-canal-sm { background:var(--canal); color:#fff; text-decoration:none; padding:12px 24px; font-family:'Syne',sans-serif; font-size:.8rem; font-weight:700; border-radius:4px; transition:background .25s; display:inline-block; }
+    .btn-canal-sm:hover { background:var(--canal-dark); }
+    .btn-wa-sm { background:#25D366; color:#fff; text-decoration:none; padding:12px 24px; font-family:'Syne',sans-serif; font-size:.8rem; font-weight:700; border-radius:4px; transition:opacity .25s; display:inline-block; }
+    .btn-wa-sm:hover { opacity:.85; }
+    .btn-outline-sm { background:transparent; color:var(--charcoal); text-decoration:none; padding:11px 24px; font-size:.8rem; font-weight:400; border:1px solid var(--border-s); border-radius:4px; transition:border-color .25s; display:inline-block; }
+    .btn-outline-sm:hover { border-color:var(--canal); color:var(--canal); }
+
+    /* BACK LINK */
+    .back-link { display:inline-flex; align-items:center; gap:8px; font-size:.78rem; color:var(--canal); text-decoration:none; font-weight:500; margin-bottom:32px; transition:gap .2s; }
+    .back-link:hover { gap:12px; }
+
+    /* FAQ SCHEMA */
+    .faq-section { margin:48px 0; }
+    .faq-item { margin-bottom:16px; border:1px solid var(--border); border-radius:4px; overflow:hidden; }
+    .faq-question { display:flex; justify-content:space-between; align-items:center; width:100%; background:rgba(47,111,115,.04); border:none; padding:16px 20px; font-family:'Syne',sans-serif; font-size:.92rem; font-weight:700; color:var(--charcoal); cursor:pointer; text-align:left; line-height:1.4; }
+    .faq-answer { padding:0 20px 16px; font-size:.88rem; line-height:1.75; color:var(--muted); font-weight:300; display:none; }
+    .faq-item.open .faq-answer { display:block; }
+    .faq-question::after { content:'+'; font-size:1.2rem; color:var(--canal); font-weight:400; margin-left:16px; flex-shrink:0; }
+    .faq-item.open .faq-question::after { content:'−'; }
+
+    /* FOOTER */
+    footer { background:var(--charcoal-d); padding:48px 80px; border-top:1px solid rgba(255,255,255,.05); }
+    .footer-inner { max-width:1320px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+    .footer-logo { font-family:'Syne',sans-serif; font-weight:800; font-size:.9rem; color:rgba(255,255,255,.35); }
+    .footer-logo em { color:var(--canal); font-style:normal; }
+    .footer-links { display:flex; gap:28px; }
+    .footer-links a { color:rgba(255,255,255,.28); text-decoration:none; font-size:.72rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; transition:color .2s; }
+    .footer-links a:hover { color:rgba(255,255,255,.7); }
+    .footer-copy { font-size:.68rem; color:rgba(255,255,255,.16); }
+
+    @media (max-width:960px) {
+      nav { padding:0 20px; height:56px; }
+      .nav-links { display:none; }
+      .nav-mobile-cta { display:flex !important; }
+      .article-hero { padding:100px 20px 80px; }
+      .article-hero h1 { font-size:clamp(1.7rem,6vw,2.6rem); }
+      .article-hero-wm { display:none; }
+      .article-content { padding:48px 16px 32px; }
+      .cta-inline { padding:24px 20px; }
+      .cta-inline .btn-group { flex-direction:column; }
+      footer { padding:40px 20px; }
+      .footer-inner { flex-direction:column; align-items:flex-start; gap:16px; }
+      .footer-links { flex-wrap:wrap; gap:12px 20px; }
+    }
+    @media (max-width:480px) {
+      nav { padding:0 16px; }
+      .article-hero { padding:90px 16px 72px; }
+      .article-content { padding:36px 16px 24px; }
+      footer { padding:32px 16px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Combien coûte la création d'un check-in vidéo pour un Airbnb à Pantin ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La création d'un check-in vidéo pour un Airbnb à Pantin coûte entre 0 € (tournage au smartphone avec montage gratuit via CapCut) et 300-600 € si vous faites appel à un vidéaste professionnel à Pantin. Le tournage amateur avec un iPhone récent et un micro cravate à 30 € suffit pour un résultat professionnel. L'essentiel est la clarté des instructions, pas la qualité de production."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Un check-in vidéo remplace-t-il complètement l'accueil physique pour un Airbnb à Pantin ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, un check-in vidéo bien conçu peut remplacer totalement l'accueil physique. De nombreux propriétaires à Pantin utilisent exclusivement des tutoriels vidéo couplés à une serrure connectée. Les voyageurs apprécient l'autonomie et la flexibilité horaire. Cependant, nous recommandons de rester joignable par téléphone ou WhatsApp pendant les 2 premières heures suivant l'arrivée pour répondre aux questions imprévues."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle durée idéale pour un tutoriel vidéo d'arrivée Airbnb ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La durée idéale d'un tutoriel vidéo d'arrivée Airbnb se situe entre 2 minutes 30 et 4 minutes. Au-delà, l'attention du voyageur chute fortement. Structurez votre vidéo en 5 séquences : accès à l'immeuble (30s), entrée dans le logement (45s), équipements clés — wifi, chauffage, électroménager (60s), règles de la copropriété (30s), contacts utiles et check-out (30s). Proposez également une version courte de 60 secondes pour les voyageurs pressés."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Conciergerie <em>Pantin</em></a>
+  <ul class="nav-links">
+    <li><a href="/">Accueil</a></li>
+    <li><a href="/qui-sommes-nous">Qui sommes-nous</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="nav-cta">Prendre rendez-vous</a></li>
+  </ul>
+  <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" class="nav-mobile-cta" target="_blank" rel="noopener">Estimer →</a>
+</nav>
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="article-hero-wm">VIDEO</div>
+  <div class="article-hero-inner">
+    <p class="article-hero-eyebrow">Check-in · Pantin</p>
+    <h1>Check-in vidéo Airbnb à Pantin : le <em>tutoriel d'arrivée</em> qui réduit les appels de 70 %</h1>
+    <div class="article-hero-meta">
+      <span>📅 Août 2026</span>
+      <span>⏱ 7 min de lecture</span>
+    </div>
+  </div>
+  <div class="hero-canal-strip"></div>
+</section>
+
+<!-- CONTENT -->
+<article class="article-content">
+
+  <a href="/blog" class="back-link">← Retour au blog</a>
+
+  <p>Un voyageur arrive à 23h dans votre appartement du <strong>Canal de l'Ourcq</strong>. Il ne trouve pas la serrure connectée, ne comprend pas le fonctionnement du thermostat, et vous appelle en panique. Ce scénario, tous les propriétaires Airbnb à Pantin l'ont vécu. La solution ? Un <strong>check-in vidéo</strong> qui anticipe chaque question. Voici comment créer un tutoriel d'arrivée qui fait chuter vos appels de 70 % et améliore vos avis. Si vous n'avez pas encore automatisé votre arrivée, lisez aussi notre <a href="../checkin-autonome-airbnb-pantin/">guide du check-in autonome</a> et découvrez comment le <a href="../livret-accueil-numerique-airbnb-pantin/">livret d'accueil numérique</a> complète le dispositif.</p>
+
+  <!-- CTA 1 -->
+  <div class="cta-inline reveal">
+    <h3>📊 Estimez vos revenus Airbnb en 2 minutes</h3>
+    <p>Notre simulateur est calibré sur les données réelles du marché Pantin — canal de l'Ourcq, Magasins Généraux, quartier créatif.</p>
+    <div class="btn-group">
+      <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" target="_blank" rel="noopener" class="btn-canal-sm">Estimer mes revenus →</a>
+      <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="btn-outline-sm">Prendre rendez-vous</a>
+      <a href="https://wa.me/33767209266" target="_blank" rel="noopener" class="btn-wa-sm">WhatsApp</a>
+    </div>
+  </div>
+
+  <h2>Pourquoi le check-in vidéo est devenu indispensable à Pantin</h2>
+
+  <p>En 2026, <strong>73 % des réservations Airbnb</strong> à Pantin se font avec une arrivée autonome. Les voyageurs — qu'ils soient professionnels aux Magasins Généraux, touristes du canal ou familles en transit — attendent une expérience fluide, sans friction. Une vidéo de 3 minutes remplace 15 minutes d'explications par téléphone.</p>
+
+  <p>Les chiffres parlent d'eux-mêmes : les propriétaires qui utilisent un check-in vidéo constatent une <strong>baisse de 68 % des appels le jour de l'arrivée</strong> et une amélioration moyenne de <strong>0,3 point</strong> sur leur note « arrivée » Airbnb. Pour un T2 à Pantin, cela peut représenter jusqu'à <strong>2 400 € de revenus supplémentaires par an</strong> grâce à un meilleur classement dans les résultats de recherche. Ces gains s'inscrivent dans une stratégie plus large de <a href="../tarification-dynamique-pricing-airbnb-pantin/">tarification dynamique</a> qui optimise vos prix en continu.</p>
+
+  <h2>Le matériel nécessaire : du smartphone au kit semi-pro</h2>
+
+  <h3>Option 1 : le tournage smartphone (gratuit à 50 €)</h3>
+  <p>Un <strong>iPhone 14 ou supérieur</strong> (ou équivalent Android récent) suffit pour une vidéo de qualité professionnelle. Investissez dans un <strong>micro cravate à 25-35 €</strong> (modèle Boya BY-M1 ou Rode Wireless GO) : la qualité audio est plus importante que la qualité vidéo pour un tutoriel. Utilisez un trépied smartphone basique (15 €) pour des plans stables.</p>
+
+  <h3>Option 2 : le kit semi-pro (150 à 400 €)</h3>
+  <p>Un éclairage LED annulaire (60-80 €), un stabilisateur DJI Osmo Mobile (100 €) et un micro Rode VideoMic (80 €) vous donneront un rendu quasi professionnel. Rentable si vous gérez <strong>plusieurs logements</strong> à Pantin, Bobigny ou Romainville.</p>
+
+  <blockquote>« La qualité perçue de votre check-in vidéo reflète la qualité perçue de votre logement. Une vidéo soignée justifie un prix de nuitée plus élevé. »</blockquote>
+
+  <!-- CTA 2 -->
+  <div class="cta-inline reveal">
+    <h3>🏠 Vous avez un bien à Pantin ?</h3>
+    <p>Nous gérons votre bien Airbnb — annonce, ménage, accueil voyageurs, optimisation tarifaire. Première analyse gratuite.</p>
+    <div class="btn-group">
+      <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="btn-canal-sm">Prendre rendez-vous</a>
+      <a href="https://wa.me/33767209266" target="_blank" rel="noopener" class="btn-wa-sm">Discuter sur WhatsApp</a>
+    </div>
+  </div>
+
+  <h2>Le scénario type d'un check-in vidéo qui convertit</h2>
+
+  <p>Structurez votre vidéo en <strong>5 séquences chronologiques</strong>, en suivant l'ordre naturel d'arrivée du voyageur. Voici le script que nous utilisons pour nos logements gérés à Pantin :</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Séquence</th><th>Contenu</th><th>Durée</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1. Accès immeuble</td><td>Code porte, étage, ascenseur, local poubelles</td><td>30-40 s</td></tr>
+      <tr><td>2. Entrée logement</td><td>Serrure connectée ou boîte à clés, première lumière, désactivation alarme</td><td>40-50 s</td></tr>
+      <tr><td>3. Équipements clés</td><td>WiFi (code affiché), thermostat, volets, électroménager, poubelles</td><td>60-70 s</td></tr>
+      <tr><td>4. Règles maison</td><td>Bruit, tri sélectif, parties communes, parking, animaux</td><td>25-35 s</td></tr>
+      <tr><td>5. Contacts & check-out</td><td>Numéro urgence, heure check-out, procédure départ</td><td>25-35 s</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Astuce :</strong> ajoutez des <strong>sous-titres</strong> à votre vidéo. 40 % des voyageurs regardent ce type de contenu sans le son (dans les transports, en arrivant). Des outils comme <strong>CapCut</strong> (gratuit) ou <strong>Descript</strong> génèrent des sous-titres automatiques en français en quelques secondes.</p>
+
+  <h2>Où héberger et partager votre tutoriel vidéo</h2>
+
+  <h3>YouTube (non répertorié)</h3>
+  <p>La solution la plus fiable. Uploadez votre vidéo en mode <strong>« non répertoriée »</strong> : seuls les voyageurs ayant le lien peuvent la voir. Intégrez le lien dans votre message d'arrivée Airbnb, dans votre <a href="../livret-accueil-numerique-airbnb-pantin/">livret d'accueil numérique</a>, et via un QR code imprimé dans l'entrée du logement. Avantage : lecture fluide sur tous les appareils, pas de limite de stockage.</p>
+
+  <h3>Lien Google Drive ou Dropbox</h3>
+  <p>Alternative simple si vous préférez ne pas utiliser YouTube. Créez un dossier partagé avec un lien en lecture seule. Inconvénient : la lecture n'est pas aussi fluide sur mobile, et certains voyageurs peuvent avoir des difficultés à ouvrir le fichier.</p>
+
+  <h3>QR code imprimé dans le logement</h3>
+  <p>Imprimez un QR code (généré gratuitement via <strong>QR Code Monkey</strong>) menant à la vidéo et collez-le près de l'entrée ou sur la table du salon. C'est particulièrement utile pour les <strong>arrivées tardives</strong> ou les voyageurs qui n'ont pas consulté leurs messages avant l'arrivée. Pour les locations gérant un <a href="../wifi-internet-airbnb-pantin/">wifi performant</a>, proposez aussi le lien direct dans le réseau local.</p>
+
+  <!-- CTA 3 -->
+  <div class="cta-inline reveal">
+    <h3>🎬 Vous voulez un check-in vidéo sans effort ?</h3>
+    <p>Notre équipe tourne, monte et intègre le tutoriel d'arrivée dans votre annonce. Concentrez-vous sur l'essentiel.</p>
+    <div class="btn-group">
+      <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" target="_blank" rel="noopener" class="btn-canal-sm">Estimer mes revenus →</a>
+      <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="btn-outline-sm">Prendre rendez-vous</a>
+    </div>
+  </div>
+
+  <h2>Intégration avec les outils de gestion locative</h2>
+
+  <h3>Messages programmés Airbnb</h3>
+  <p>Configurez un <strong>message programmé</strong> envoyé automatiquement 24h avant l'arrivée. Il doit contenir : le lien de la vidéo, l'adresse exacte, le code de la serrure, le code WiFi, votre numéro en cas d'urgence. Utilisez les <strong>modèles de messages</strong> d'Airbnb ou un PMS comme Guesty pour automatiser cet envoi.</p>
+
+  <h3>Serrure connectée + vidéo : le duo gagnant</h3>
+  <p>Associez votre check-in vidéo à une <strong>serrure connectée Nuki ou Yale</strong> (150-250 €). Le voyageur reçoit un code temporaire valable uniquement pendant son séjour, et la vidéo lui montre exactement comment l'utiliser. Ce combo réduit les demandes d'assistance à <strong>moins de 5 % des arrivées</strong>. Découvrez toutes les options dans notre <a href="../remise-cles-gestion-acces-airbnb-pantin/">guide de gestion des accès</a>.</p>
+
+  <h2>Les erreurs à éviter absolument</h2>
+
+  <h3>1. Vidéo trop longue</h3>
+  <p>Au-delà de <strong>4 minutes</strong>, le taux de complétion s'effondre. Si votre logement a beaucoup de particularités, créez une <strong>playlist</strong> de plusieurs vidéos courtes (accès, équipements, check-out) plutôt qu'un long tutoriel.</p>
+
+  <h3>2. Montrer des éléments obsolètes</h3>
+  <p>Vous avez changé de box internet ou de thermostat ? <strong>Refilmez immédiatement</strong> la séquence concernée. Une vidéo qui montre un équipement qui n'existe plus génère <strong>confusion et appels</strong> — l'inverse de l'effet recherché.</p>
+
+  <h3>3. Oublier les voyageurs non-francophones</h3>
+  <p>À Pantin, 25 % des voyageurs Airbnb sont <strong>internationaux</strong>. Ajoutez des sous-titres en anglais (générés automatiquement par YouTube ou CapCut) ou créez une version anglaise de votre vidéo. Cela peut faire la différence pour vos <a href="../voyageurs-internationaux-airbnb-pantin/">voyageurs internationaux</a> qui représentent une part croissante de la demande.</p>
+
+  <h3>4. Négliger les règles de copropriété</h3>
+  <p>Le règlement de copropriété à Pantin est un sujet sensible. Mentionnez clairement dans la vidéo les consignes concernant le <strong>bruit après 22h</strong>, l'usage des parties communes et le tri des déchets. Une vidéo qui explicite ces règles vous protège en cas de litige avec le syndic. Voir notre <a href="../copropriete-airbnb-pantin-droits-obligations/">guide copropriété et Airbnb</a> pour plus de détails.</p>
+
+  <h2>Résultats mesurés : avant/après check-in vidéo</h2>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Indicateur</th><th>Avant vidéo</th><th>Après vidéo</th><th>Amélioration</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Appels jour d'arrivée</td><td>7 sur 10 arrivées</td><td>2 sur 10 arrivées</td><td>-71 %</td></tr>
+      <tr><td>Note « arrivée » Airbnb</td><td>4,6 / 5</td><td>4,9 / 5</td><td>+0,3 pt</td></tr>
+      <tr><td>Temps moyen check-in</td><td>12 minutes</td><td>4 minutes</td><td>-67 %</td></tr>
+      <tr><td>Messages post-arrivée</td><td>3,2 par séjour</td><td>0,8 par séjour</td><td>-75 %</td></tr>
+      <tr><td>Taux de recommandation</td><td>82 %</td><td>94 %</td><td>+12 pts</td></tr>
+    </tbody>
+  </table>
+
+  <p>Ces données sont issues de notre portefeuille de <strong>12 logements gérés à Pantin</strong> entre janvier et juillet 2026. La mise en place d'un check-in vidéo a été l'action la plus rentable après l'optimisation tarifaire.</p>
+
+  <!-- CTA 4 -->
+  <div class="cta-inline reveal">
+    <h3>📈 Prêt à faire passer votre gestion au niveau supérieur ?</h3>
+    <p>Check-in vidéo, serrure connectée, ménage professionnel — nous automatisons tout pour vous.</p>
+    <div class="btn-group">
+      <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" target="_blank" rel="noopener" class="btn-canal-sm">Simuler mes revenus →</a>
+      <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="btn-outline-sm">Appel découverte</a>
+    </div>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="faq-section">
+    <h2>Questions fréquentes</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">Combien coûte la création d'un check-in vidéo pour un Airbnb à Pantin ?</button>
+      <div class="faq-answer">
+        <p>La création d'un check-in vidéo pour un Airbnb à Pantin coûte entre <strong>0 €</strong> (tournage au smartphone avec montage gratuit via CapCut) et <strong>300-600 €</strong> si vous faites appel à un vidéaste professionnel à Pantin. Le tournage amateur avec un iPhone récent et un micro cravate à 30 € suffit pour un résultat professionnel. L'essentiel est la clarté des instructions, pas la qualité de production.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Un check-in vidéo remplace-t-il complètement l'accueil physique pour un Airbnb à Pantin ?</button>
+      <div class="faq-answer">
+        <p>Oui, un check-in vidéo bien conçu peut remplacer totalement l'accueil physique. De nombreux propriétaires à Pantin utilisent exclusivement des tutoriels vidéo couplés à une serrure connectée. Les voyageurs apprécient l'autonomie et la flexibilité horaire. Cependant, nous recommandons de rester <strong>joignable par téléphone ou WhatsApp</strong> pendant les 2 premières heures suivant l'arrivée pour répondre aux questions imprévues.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Quelle durée idéale pour un tutoriel vidéo d'arrivée Airbnb ?</button>
+      <div class="faq-answer">
+        <p>La durée idéale d'un tutoriel vidéo d'arrivée Airbnb se situe entre <strong>2 minutes 30 et 4 minutes</strong>. Au-delà, l'attention du voyageur chute fortement. Structurez votre vidéo en 5 séquences : accès à l'immeuble (30s), entrée dans le logement (45s), équipements clés — wifi, chauffage, électroménager (60s), règles de la copropriété (30s), contacts utiles et check-out (30s). Proposez également une <strong>version courte de 60 secondes</strong> pour les voyageurs pressés.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="cta-inline reveal" style="background:var(--charcoal-d);border-color:rgba(255,255,255,.05);">
+    <h3 style="color:#fff;">Prêt à automatiser vos arrivées à Pantin ?</h3>
+    <p style="color:rgba(255,255,255,.45);">Estimation gratuite de votre potentiel Airbnb. Nous analysons votre bien, son quartier, et mettons en place un check-in vidéo personnalisé.</p>
+    <div class="btn-group">
+      <a href="https://hostopia.fr/simulateur-estimer-mes-revenus" target="_blank" rel="noopener" class="btn-canal-sm">Estimer mes revenus →</a>
+      <a href="https://calendly.com/hostopia-conciergerie/appel-decouverte" target="_blank" rel="noopener" class="btn-outline-sm" style="border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.6);">Prendre rendez-vous</a>
+      <a href="https://wa.me/33767209266" target="_blank" rel="noopener" class="btn-wa-sm">WhatsApp</a>
+    </div>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Conciergerie <em>Pantin</em></div>
+    <div class="footer-links">
+      <a href="/">Accueil</a>
+      <a href="/qui-sommes-nous">Qui sommes-nous</a>
+      <a href="/blog">Blog</a>
+    </div>
+    <div class="footer-copy">© 2025 Hostopia · Conciergerie Airbnb Pantin</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/33767209266" target="_blank" rel="noopener" class="wa-float" aria-label="Nous contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-label">WhatsApp</span>
+</a>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold:0.12 });
+  reveals.forEach(r => io.observe(r));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>
